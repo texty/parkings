@@ -8,15 +8,37 @@
 @import "components/footer";
 @import "components/weirdo";
 
+h1,  caption, .header {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
 body {
     height: 100vh;
+    margin-top: 0;
 }
 
 h1 {
-  text-align: center;
+  text-align: left;
+  font-size: 3.5em;
+  margin-bottom: 40px;
   @media #{$brk-spnarrow} {
-    font-size: 2.5em;
+  font-size: 2.0em;
   }
+}
+
+h2 {
+  margin-left: 10%;
+
+}
+
+h5 {
+  color: white;
 }
 
 .subtitle {
@@ -31,25 +53,42 @@ h1 {
   @media #{$brk-medium} {
     font-size: 2em;
   }
+
 }
 
 
+
 .header {
-  position: absolute;
-  z-index: 100000;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 15vh;
-  text-align: center;
-  color:#FFF;
-  @media #{$brk-xlarge} {
-    width: 45%;
-  }
-  @media #{$brk-spnarrow} {
-    width: 75%;
-  }
+  background-color:#9d9d9d;
+  -o-background-size: cover;
+  margin-top: 0;
+  height: 300px;
+  width: 100%;
+
+}
+
+.header-overlay{
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+#header-text {
+
+  position: relative;
+  color: white;
+
+  margin-left: 10%;
+  margin-right: 10%;
+  top: 25%;
+
+}
+@media (max-width: 800px) {
+  #header-text {
+
+    margin-left: 8%;
+    margin-right: 2%;
+    top: 12%;}
 }
 
 
@@ -130,14 +169,19 @@ video {
   }
 }
 
+p {
+  width: 50%;
+  margin-left: 10%;
+  font-size: 1em;
+
+}
 
 p {
     &.first{
-    margin-top: 3.5em;
+    margin-top: 3.0em;
     &::first-letter {
     float: left;
     margin: 0 20px 0 0;
-    font-size: 52px;
     font-weight: bold;
     padding: 10px;
     line-height: 1;
@@ -157,15 +201,23 @@ p {
     padding: 1px;
   }
   @media #{$brk-xlarge} {
-    font-size:2.3em;
+    font-size:1.5em;
+    width: 50%;
   }
   @media #{$brk-large} {
-    font-size:2em;
+    font-size:1.5em;
+    width: 50%;
   }
   @media #{$brk-medium} {
-    font-size: 1.6em;
+    font-size: 1.5em;
+  }
+  @media #{$brk-spnarrow} {
+    font-size: 1.5em;
+    width: 90%;
   }
 }
+
+
 
 
 .animation-explainer p {
@@ -261,4 +313,5 @@ p {
    pointer-events: none;
    width: 5px;
 }
+
 

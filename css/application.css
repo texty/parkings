@@ -255,14 +255,32 @@ p {
       fill: none;
       stroke: none; }
 
+h1, caption, .header {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
 body {
-  height: 100vh; }
+  height: 100vh;
+  margin-top: 0; }
 
 h1 {
-  text-align: center; }
+  text-align: left;
+  font-size: 3.5em;
+  margin-bottom: 40px; }
   @media (max-width: 667px) {
     h1 {
-      font-size: 2.5em; } }
+      font-size: 2.0em; } }
+
+h2 {
+  margin-left: 10%; }
+
+h5 {
+  color: white; }
 
 .subtitle {
   line-height: 1.5em;
@@ -278,22 +296,29 @@ h1 {
       font-size: 2em; } }
 
 .header {
-  position: absolute;
-  z-index: 100000;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 15vh;
-  text-align: center;
-  color: #FFF; }
-  @media (max-width: 2570px) {
-    .header {
-      width: 45%; } }
-  @media (max-width: 667px) {
-    .header {
-      width: 75%; } }
+  background-color: #9d9d9d;
+  -o-background-size: cover;
+  margin-top: 0;
+  height: 300px;
+  width: 100%; }
 
+.header-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); }
+
+#header-text {
+  position: relative;
+  color: white;
+  margin-left: 10%;
+  margin-right: 10%;
+  top: 25%; }
+
+@media (max-width: 800px) {
+  #header-text {
+    margin-left: 8%;
+    margin-right: 2%;
+    top: 12%; } }
 .first-paragraph {
   margin-top: 130vh; }
 
@@ -357,12 +382,16 @@ video {
     .credits {
       font-size: 1.4em; } }
 
+p {
+  width: 50%;
+  margin-left: 10%;
+  font-size: 1em; }
+
 p.first {
-  margin-top: 3.5em; }
+  margin-top: 3.0em; }
   p.first::first-letter {
     float: left;
     margin: 0 20px 0 0;
-    font-size: 52px;
     font-weight: bold;
     padding: 10px;
     line-height: 1; }
@@ -384,13 +413,19 @@ p span {
   padding: 1px; }
 @media (max-width: 2570px) {
   p {
-    font-size: 2.3em; } }
+    font-size: 1.5em;
+    width: 50%; } }
 @media (max-width: 1440px) {
   p {
-    font-size: 2em; } }
+    font-size: 1.5em;
+    width: 50%; } }
 @media (max-width: 1285px) {
   p {
-    font-size: 1.6em; } }
+    font-size: 1.5em; } }
+@media (max-width: 667px) {
+  p {
+    font-size: 1.5em;
+    width: 90%; } }
 
 .animation-explainer p {
   color: #fff;
