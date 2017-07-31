@@ -8,6 +8,16 @@
 @import "components/footer";
 @import "components/weirdo";
 
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
 body {
     height: 100vh;
     margin-top: 0;
@@ -24,19 +34,26 @@ h1 {
   }
 
   @media #{$brk-large} {
-    font-size: 3.2em;
+    font-size: 3.4em;
     padding-top: 2%;
   }
 
 
   @media #{$brk-medium} {
-    font-size: 3.0em;
+    font-size: 3.2em;
     padding-top: 5%;
   }
 
+  @media #{$brk-narrow} {
+    font-size: 3.2em;
+    padding-top: 5%;
+
+  }
+
   @media #{$brk-spnarrow} {
-  font-size: 2.2em;
-  padding-top: 5%;
+  font-size: 2.6em;
+    padding-top: 1%;
+
   }
 }
 
@@ -52,22 +69,6 @@ h4 {
 h5 {
   font-size: 0.7em;
   color: white;
-}
-
-
-
-.subtitle {
-  line-height: 1.5em;
-  font-weight: 300;
-  @media #{$brk-xlarge} {
-    font-size:2.7em;
-  }
-  @media #{$brk-large} {
-    font-size:3em;
-  }
-  @media #{$brk-medium} {
-    font-size: 2em;
-  }
 }
 
 .header {
@@ -94,8 +95,8 @@ h5 {
   @media (min-width: 320px) and (max-width: 767px) {
     .header {
     background-image: url('../img/62.jpg');
-    height: 280px;
-    margin-top: 0;
+    height: 350px;
+    margin-top: -7%;
   }
 
 }
@@ -113,7 +114,8 @@ h5 {
   position: relative;
   margin-left: 10%;
   margin-right: 10%;
-  top: 15%;
+  padding-top: 5%;
+
 
 
 }
@@ -286,6 +288,7 @@ p {
 @media only screen and (min-width:768px) {
   .mobile {
     display:none !important;
+    padding-top: 0;
   }
 
   .desktop {
@@ -349,6 +352,8 @@ ol.carousel-indicators {
 #video-player {
   height: 335px;
 }
+
+
 
 
 
