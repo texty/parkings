@@ -25,11 +25,11 @@ body {
 
 h1 {
   text-align: left;
-  font-size: 3.2em;
   margin-bottom: 40px;
   color: white;
 
   @media #{$brk-large} {
+    font-size: 3.2em;
     padding-top: 2%;
   }
 
@@ -40,8 +40,8 @@ h1 {
   }
 
   @media #{$brk-spnarrow} {
-  font-size: 2.5em;
-  padding-top: 10%;
+  font-size: 2.2em;
+  padding-top: 5%;
   }
 }
 
@@ -76,25 +76,28 @@ h5 {
 }
 
 .header {
-  background-color: grey;
-  -o-background-size: cover;
   margin-top: 0;
   width: 100%;
 
   @media #{$brk-xlarge} {
+    background-color: grey;
     height: 450px;
   }
 
   @media #{$brk-large} {
+    background-color: grey;
     height: 450px;
   }
 
   @media #{$brk-medium} {
+    background-color: grey;
     height: 450px;
   }
   @media #{$brk-spnarrow} {
-    height: 300px;
-  }
+    background-image: url('../img/62.jpg');
+    background: cover;
+    height: 280px;
+      }
 
 }
 
@@ -335,6 +338,15 @@ ol.carousel-indicators {
   height: 300px;
 
 }
+
+.caption {
+  font-size: 1.1em;
+  text-align: right;
+  font-style: italic;
+  margin-top: 80px;
+}
+
+
 
 
 

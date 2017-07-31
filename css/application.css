@@ -270,11 +270,11 @@ body {
 
 h1 {
   text-align: left;
-  font-size: 3.2em;
   margin-bottom: 40px;
   color: white; }
   @media (max-width: 1440px) {
     h1 {
+      font-size: 3.2em;
       padding-top: 2%; } }
   @media (max-width: 1285px) {
     h1 {
@@ -282,8 +282,8 @@ h1 {
       padding-top: 5%; } }
   @media (max-width: 770px) {
     h1 {
-      font-size: 2.5em;
-      padding-top: 10%; } }
+      font-size: 2.2em;
+      padding-top: 5%; } }
 
 h2 {
   margin-left: 10%; }
@@ -309,22 +309,25 @@ h5 {
       font-size: 2em; } }
 
 .header {
-  background-color: grey;
-  -o-background-size: cover;
   margin-top: 0;
   width: 100%; }
   @media (max-width: 2570px) {
     .header {
+      background-color: grey;
       height: 450px; } }
   @media (max-width: 1440px) {
     .header {
+      background-color: grey;
       height: 450px; } }
   @media (max-width: 1285px) {
     .header {
+      background-color: grey;
       height: 450px; } }
   @media (max-width: 770px) {
     .header {
-      height: 300px; } }
+      background-image: url("../img/62.jpg");
+      background: cover;
+      height: 280px; } }
 
 .overlay {
   width: 100%;
@@ -502,5 +505,11 @@ ol.carousel-indicators {
   position: absolute;
   width: 100%;
   height: 300px; }
+
+.caption {
+  font-size: 1.1em;
+  text-align: right;
+  font-style: italic;
+  margin-top: 80px; }
 
 /*# sourceMappingURL=application.css.map */
