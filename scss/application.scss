@@ -29,29 +29,29 @@ h1 {
   color: white;
 
   @media #{$brk-xlarge} {
-    font-size: 3.4em;
+    font-size: 3.2em;
     padding-top: 2%;
   }
 
   @media #{$brk-large} {
-    font-size: 3.4em;
+    font-size: 3.2em;
     padding-top: 2%;
   }
 
 
   @media #{$brk-medium} {
-    font-size: 3.2em;
+    font-size: 3.0em;
     padding-top: 5%;
   }
 
   @media #{$brk-narrow} {
-    font-size: 3.2em;
+    font-size: 3.0em;
     padding-top: 5%;
 
   }
 
   @media #{$brk-spnarrow} {
-  font-size: 2.6em;
+  font-size: 2.4em;
     padding-top: 1%;
 
   }
@@ -190,24 +190,28 @@ h5 {
 }
 
 p {
-  margin-left: 5%;
+
 
   @media #{$brk-xlarge} {
     font-size:1.5em;
     width: 50%;
+    margin-left: 10%
   }
   @media #{$brk-large} {
     font-size:1.5em;
     width: 50%;
+    margin-left: 10%
   }
   @media #{$brk-medium} {
     font-size: 1.5em;
     width: 50%;
+    margin-left: 10%
   }
   @media #{$brk-spnarrow} {
     font-size: 1.5em;
     width: 90%;
     margin-right: 5%;
+    margin-left: 5%;
   }
 
 }
