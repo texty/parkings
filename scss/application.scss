@@ -8,16 +8,6 @@
 @import "components/footer";
 @import "components/weirdo";
 
-h1,  caption, .header {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-}
-
 body {
     height: 100vh;
     margin-top: 0;
@@ -81,27 +71,31 @@ h5 {
 }
 
 .header {
+  position: relative;
   margin-top: 0;
   width: 100%;
+}
 
-  @media #{$brk-xlarge} {
-    background-color: grey;
-    height: 450px;
+
+  @media (min-width: 1281px) {
+    .header {
+      background-color: grey;
+      height: 450px;
+    }
   }
 
-  @media #{$brk-large} {
-    background-color: grey;
-    height: 450px;
+  @media (min-width: 768px) and (max-width: 1280px) {
+    .header {
+      background-color: grey;
+      height: 450px;
+    }
   }
 
-  @media #{$brk-medium} {
-    background-color: grey;
-    height: 450px;
-  }
-
-  @media #{$brk-spnarrow} {
+  @media (min-width: 320px) and (max-width: 767px) {
+    .header {
     background-image: url('../img/62.jpg');
     height: 280px;
+    margin-top: 0;
   }
 
 }
@@ -194,7 +188,7 @@ h5 {
 }
 
 p {
-  margin-left: 10%;
+  margin-left: 5%;
 
   @media #{$brk-xlarge} {
     font-size:1.5em;
@@ -211,6 +205,7 @@ p {
   @media #{$brk-spnarrow} {
     font-size: 1.5em;
     width: 90%;
+    margin-right: 5%;
   }
 
 }
@@ -288,17 +283,24 @@ p {
 
 
 
-.mobile {
-  display: none;
-  @media #{$brk-spnarrow} {
-    display: block;
+@media only screen and (min-width:768px) {
+  .mobile {
+    display:none !important;
+  }
+
+  .desktop {
+    display:block !important;
   }
 }
 
-.desktop {
-  display: block;
-  @media #{$brk-spnarrow} {
-    display: none;
+//small screen sizes
+@media only screen and (max-width: 767px) {
+  .mobile {
+    display:block !important;
+  }
+
+  .desktop {
+    display:none !important;
   }
 }
 
@@ -337,13 +339,6 @@ ol.carousel-indicators {
   color: black;
 }
 
-.video {
-  position: absolute;
-  width: 100%;
-  height: 300px;
-
-}
-
 .caption {
   font-size: 1.1em;
   text-align: right;
@@ -352,9 +347,9 @@ ol.carousel-indicators {
 }
 
 #video-player {
-  width: 305px;
   height: 335px;
 }
+
 
 
 
