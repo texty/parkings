@@ -272,6 +272,10 @@ h1 {
   text-align: left;
   margin-bottom: 40px;
   color: white; }
+  @media (max-width: 2570px) {
+    h1 {
+      font-size: 3.2em;
+      padding-top: 2%; } }
   @media (max-width: 1440px) {
     h1 {
       font-size: 3.2em;

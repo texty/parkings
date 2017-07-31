@@ -28,6 +28,11 @@ h1 {
   margin-bottom: 40px;
   color: white;
 
+  @media #{$brk-xlarge} {
+    font-size: 3.2em;
+    padding-top: 2%;
+  }
+
   @media #{$brk-large} {
     font-size: 3.2em;
     padding-top: 2%;
