@@ -515,4 +515,8 @@ ol.carousel-indicators {
   font-style: italic;
   margin-top: 80px; }
 
+#video-player {
+  width: 305px;
+  height: 335px; }
+
 /*# sourceMappingURL=application.css.map */
