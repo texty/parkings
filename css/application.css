@@ -129,7 +129,7 @@ p {
     .copying-info {
       padding-top: 10px;
       font-size: 0.5em; } }
-  @media (max-width: 667px) {
+  @media (max-width: 770px) {
     .copying-info {
       padding-top: 10px; } }
 
@@ -273,17 +273,26 @@ h1 {
   font-size: 3.5em;
   margin-bottom: 40px;
   color: white; }
+  @media (max-width: 1440px) {
+    h1 {
+      padding-top: 10%; } }
   @media (max-width: 1285px) {
     h1 {
-      font-size: 3.0em; } }
-  @media (max-width: 667px) {
+      font-size: 3.0em;
+      padding-top: 5%; } }
+  @media (max-width: 770px) {
     h1 {
-      font-size: 2.0em; } }
+      font-size: 2.5em;
+      padding-top: 10%; } }
 
 h2 {
   margin-left: 10%; }
 
+h4 {
+  color: white; }
+
 h5 {
+  font-size: 0.8em;
   color: white; }
 
 .subtitle {
@@ -300,26 +309,34 @@ h5 {
       font-size: 2em; } }
 
 .header {
-  background-color: #9d9d9d;
+  background-color: grey;
   -o-background-size: cover;
   margin-top: 0;
-  height: 500px;
   width: 100%; }
+  @media (max-width: 2570px) {
+    .header {
+      height: 450px; } }
+  @media (max-width: 1440px) {
+    .header {
+      height: 450px; } }
+  @media (max-width: 1285px) {
+    .header {
+      height: 450px; } }
+  @media (max-width: 770px) {
+    .header {
+      height: 300px; } }
 
-.header-overlay {
+.overlay {
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); }
+  background: black;
+  opacity: 0.5; }
 
 #header-text {
-  /*margin: 0 auto;*/
   position: relative;
-  /*text-align: left;*/
   margin-left: 10%;
   margin-right: 10%;
-  top: 25%;
-  /*width: 100%;*/
-  /*background-color: rgba(255, 255, 255, 0.6);*/ }
+  top: 15%; }
 
 @media (max-width: 800px) {
   #header-text {
@@ -329,32 +346,12 @@ h5 {
 .first-paragraph {
   margin-top: 130vh; }
 
-.video-events-con {
-  opacity: 1;
-  width: 100%   !important;
-  height: auto   !important;
-  margin: 0;
-  left: 0;
-  top: 0;
-  z-index: 2; }
-
 .svg-container {
   opacity: 1;
   margin: 0;
   left: 0;
   top: 0;
   z-index: 2; }
-
-video {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -100;
-  transform: translateX(-50%) translateY(-50%); }
 
 .svgmap {
   position: fixed;
@@ -390,49 +387,23 @@ video {
       font-size: 1.4em; } }
 
 p {
-  width: 50%;
-  margin-left: 10%;
-  font-size: 1em; }
-
-p.first {
-  margin-top: 3.0em; }
-  p.first::first-letter {
-    float: left;
-    margin: 0 20px 0 0;
-    font-weight: bold;
-    padding: 10px;
-    line-height: 1; }
-p.footnote {
-  font-size: 1.3em;
-  line-height: 1.7em;
-  font-weight: normal;
-  color: #969696;
-  margin-top: 1em; }
-p.parallax-note {
-  font-size: 1.2em;
-  line-height: 1.7em;
-  font-weight: normal;
-  color: #969696;
-  color: #fff;
-  padding: 20px; }
-p span {
-  background: rgba(221, 197, 188, 0.5);
-  padding: 1px; }
-@media (max-width: 2570px) {
-  p {
-    font-size: 1.5em;
-    width: 50%; } }
-@media (max-width: 1440px) {
-  p {
-    font-size: 1.5em;
-    width: 50%; } }
-@media (max-width: 1285px) {
-  p {
-    font-size: 1.5em; } }
-@media (max-width: 667px) {
-  p {
-    font-size: 1.5em;
-    width: 90%; } }
+  margin-left: 10%; }
+  @media (max-width: 2570px) {
+    p {
+      font-size: 1.5em;
+      width: 50%; } }
+  @media (max-width: 1440px) {
+    p {
+      font-size: 1.5em;
+      width: 50%; } }
+  @media (max-width: 1285px) {
+    p {
+      font-size: 1.5em;
+      width: 50%; } }
+  @media (max-width: 770px) {
+    p {
+      font-size: 1.5em;
+      width: 90%; } }
 
 .animation-explainer p {
   color: #fff;
@@ -466,7 +437,7 @@ p span {
     position: relative;
     left: 0em;
     top: 0.5em; }
-    @media (max-width: 667px) {
+    @media (max-width: 770px) {
       .quote::before {
         font-size: 7em; } }
 
@@ -490,13 +461,13 @@ p span {
 
 .mobile {
   display: none; }
-  @media (max-width: 1024px) {
+  @media (max-width: 770px) {
     .mobile {
       display: block; } }
 
 .desktop {
   display: block; }
-  @media (max-width: 1024px) {
+  @media (max-width: 770px) {
     .desktop {
       display: none; } }
 
@@ -524,8 +495,12 @@ p span {
   background-image: none;
   margin-left: -5%; }
 
+ol.carousel-indicators {
+  color: black; }
+
 .video {
-  height: 300px;
-  margin-left: 10%; }
+  position: absolute;
+  width: 100%;
+  height: 300px; }
 
 /*# sourceMappingURL=application.css.map */

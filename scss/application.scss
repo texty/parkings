@@ -29,12 +29,19 @@ h1 {
   margin-bottom: 40px;
   color: white;
 
-  @media #{$brk-medium} {
-    font-size: 3.0em;
+  @media #{$brk-large} {
+    padding-top: 10%;
   }
 
-    @media #{$brk-spnarrow} {
-  font-size: 2.0em;
+
+  @media #{$brk-medium} {
+    font-size: 3.0em;
+    padding-top: 5%;
+  }
+
+  @media #{$brk-spnarrow} {
+  font-size: 2.5em;
+  padding-top: 10%;
   }
 }
 
@@ -43,9 +50,16 @@ h2 {
 
 }
 
-h5 {
+h4 {
   color: white;
 }
+
+h5 {
+  font-size: 0.8em;
+  color: white;
+}
+
+
 
 .subtitle {
   line-height: 1.5em;
@@ -59,35 +73,47 @@ h5 {
   @media #{$brk-medium} {
     font-size: 2em;
   }
-
 }
-
-
 
 .header {
-  background-color:#9d9d9d;
+  background-color: grey;
   -o-background-size: cover;
   margin-top: 0;
-  height: 500px;
   width: 100%;
+
+  @media #{$brk-xlarge} {
+    height: 450px;
+  }
+
+  @media #{$brk-large} {
+    height: 450px;
+  }
+
+  @media #{$brk-medium} {
+    height: 450px;
+  }
+  @media #{$brk-spnarrow} {
+    height: 300px;
+  }
 
 }
 
-.header-overlay{
+.overlay{
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.5);
+  background:black;
+  opacity:0.5;
+
+
 }
 
 #header-text {
-  /*margin: 0 auto;*/
   position: relative;
-  /*text-align: left;*/
   margin-left: 10%;
   margin-right: 10%;
-  top: 25%;
-  /*width: 100%;*/
-  /*background-color: rgba(255, 255, 255, 0.6);*/
+  top: 15%;
+
+
 }
 @media (max-width: 800px) {
   #header-text {
@@ -102,15 +128,7 @@ h5 {
     margin-top:130vh;
 }
 
-.video-events-con {
-  opacity: 1;
-  width: 100%   !important;
-  height: auto   !important;
-  margin: 0;
-  left: 0;
-  top: 0;
-  z-index: 2;
-}
+
 
 
 
@@ -123,17 +141,9 @@ h5 {
 }
 
 
-video { 
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    transform: translateX(-50%) translateY(-50%);
-}
+
+
+
 
 .svgmap { 
     position: fixed;
@@ -176,36 +186,8 @@ video {
 }
 
 p {
-  width: 50%;
   margin-left: 10%;
-  font-size: 1em;
 
-}
-
-p {
-    &.first{
-    margin-top: 3.0em;
-    &::first-letter {
-    float: left;
-    margin: 0 20px 0 0;
-    font-weight: bold;
-    padding: 10px;
-    line-height: 1;
-    }
-  }
-   &.footnote {
-    @include text(1.3em, 1.7em, normal, #969696);
-    margin-top:1em;
-  }
-  &.parallax-note {
-  @include text(1.2em, 1.7em, normal, #969696);
-  color:#fff;
-  padding:20px;
-  }
-   & span {
-    background: rgba(221,197,188, 0.5);
-    padding: 1px;
-  }
   @media #{$brk-xlarge} {
     font-size:1.5em;
     width: 50%;
@@ -216,12 +198,16 @@ p {
   }
   @media #{$brk-medium} {
     font-size: 1.5em;
+    width: 50%;
   }
   @media #{$brk-spnarrow} {
     font-size: 1.5em;
     width: 90%;
   }
+
 }
+
+
 
 
 
@@ -296,14 +282,14 @@ p {
 
 .mobile {
   display: none;
-  @media #{$brk-narrow} {
+  @media #{$brk-spnarrow} {
     display: block;
   }
 }
 
 .desktop {
   display: block;
-  @media #{$brk-narrow} {
+  @media #{$brk-spnarrow} {
     display: none;
   }
 }
@@ -339,10 +325,16 @@ p {
   margin-left: -5%;
 }
 
+ol.carousel-indicators {
+  color: black;
+}
 
 .video {
+  position: absolute;
+  width: 100%;
   height: 300px;
-  margin-left: 10%;
 
 }
+
+
 
