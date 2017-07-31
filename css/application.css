@@ -270,12 +270,12 @@ body {
 
 h1 {
   text-align: left;
-  font-size: 3.5em;
+  font-size: 3.2em;
   margin-bottom: 40px;
   color: white; }
   @media (max-width: 1440px) {
     h1 {
-      padding-top: 10%; } }
+      padding-top: 2%; } }
   @media (max-width: 1285px) {
     h1 {
       font-size: 3.0em;
@@ -292,7 +292,7 @@ h4 {
   color: white; }
 
 h5 {
-  font-size: 0.8em;
+  font-size: 0.7em;
   color: white; }
 
 .subtitle {
@@ -374,14 +374,14 @@ h5 {
     font-weight: 700; }
   .credits.date {
     margin-top: 1em;
-    font-size: 1.1em;
+    font-size: 1.0em;
     font-weight: 300; }
   @media (max-width: 2570px) {
     .credits {
-      font-size: 2em; } }
+      font-size: 1.8em; } }
   @media (max-width: 1440px) {
     .credits {
-      font-size: 1.7em; } }
+      font-size: 1.6em; } }
   @media (max-width: 1285px) {
     .credits {
       font-size: 1.4em; } }
