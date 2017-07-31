@@ -29,7 +29,7 @@ h1 {
   color: white;
 
   @media #{$brk-xlarge} {
-    font-size: 3.2em;
+    font-size: 3.4em;
     padding-top: 2%;
   }
 
@@ -98,15 +98,15 @@ h5 {
     background-color: grey;
     height: 450px;
   }
+
   @media #{$brk-spnarrow} {
     background-image: url('../img/62.jpg');
-    background: cover;
     height: 280px;
-      }
+  }
 
 }
 
-.overlay{
+.overlay {
   width: 100%;
   height: 100%;
   background:black;
