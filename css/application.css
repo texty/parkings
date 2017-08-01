@@ -274,16 +274,13 @@ h1 {
   color: white; }
   @media (max-width: 2570px) {
     h1 {
-      font-size: 3.2em;
-      padding-top: 2%; } }
+      font-size: 3.2em; } }
   @media (max-width: 1440px) {
     h1 {
-      font-size: 3.2em;
-      padding-top: 2%; } }
+      font-size: 3.2em; } }
   @media (max-width: 1285px) {
     h1 {
-      font-size: 3.0em;
-      padding-top: 5%; } }
+      font-size: 3.0em; } }
   @media (max-width: 1024px) {
     h1 {
       font-size: 3.0em;
@@ -294,7 +291,21 @@ h1 {
       padding-top: 1%; } }
 
 h2 {
-  margin-left: 10%; }
+  font-size: 2.0em;
+  margin-left: 5%; }
+
+.subtitle {
+  font-size: 2.0em;
+  color: white;
+  width: auto;
+  line-height: 1.4em;
+  margin-left: 0; }
+  @media (max-width: 1024px) {
+    .subtitle {
+      font-size: 1.6em; } }
+  @media (max-width: 770px) {
+    .subtitle {
+      font-size: 1.4em; } }
 
 h4 {
   color: white; }
@@ -319,7 +330,7 @@ h5 {
 @media (min-width: 320px) and (max-width: 767px) {
   .header {
     background-image: url("../img/62.jpg");
-    height: 350px;
+    height: 410px;
     margin-top: -7%; } }
 .overlay {
   width: 100%;
@@ -505,5 +516,8 @@ ol.carousel-indicators {
 
 #video-player {
   height: 335px; }
+
+.first {
+  margin-top: 20px; }
 
 /*# sourceMappingURL=application.css.map */
