@@ -100,14 +100,14 @@ h6 {
 
   @media (min-width: 1281px) {
     .header {
-      //background-color: grey;
+      background-color: #f0f0f0;
       //height: 450px;
     }
   }
 
   @media (min-width: 769px) and (max-width: 1280px) {
     .header {
-      //background-color: grey;
+      background-color: #f0f0f0;
 
     }
   }
@@ -424,7 +424,7 @@ h2 span {
 
 
   @media #{$brk-xlarge} {
-    width: 60%;
+    width: 45%;
     margin-left: 15%;
     margin-right: 5%;
   }
@@ -444,7 +444,7 @@ h2 span {
   margin-bottom: 30px;
 
   @media #{$brk-xlarge} {
-    width: 60%;
+    width: 50%;
   }
 
 
