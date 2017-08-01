@@ -23,63 +23,45 @@ body {
     margin-top: 0;
 }
 
+h3 {
+  text-align: left;
+  color: white;
+  padding-top: 10vw;
+  padding-bottom: 5vw;
+  font-size: 5vw;
+}
+
 h1 {
   text-align: left;
-  margin-bottom: 40px;
   color: white;
-
-  @media #{$brk-xlarge} {
-    font-size: 3.2em;
-
-  }
-
-  @media #{$brk-large} {
-    font-size: 3.2em;
-
-  }
-
-
-  @media #{$brk-medium} {
-    font-size: 3.0em;
-
-  }
-
-  @media #{$brk-narrow} {
-    font-size: 3.0em;
-
-  }
-
-  @media #{$brk-spnarrow} {
-  font-size: 2.2em;
-    padding-top: 10%;
-
-  }
+  font-size: 2.2vw;
 }
+
+
 
 h2 {
   font-size: 2.0em;
   margin-left: 10%;
 
-
-
 }
 
 .subtitle {
-  font-size: 2.0em;
   color: white;
   width: auto;
-  line-height: 1.4em;
+  line-height: 1.5em;
   margin-left: 0;
+  padding-top: 2vw;
+  font-size: 1.8vw;
+}
 
-  @media #{$brk-narrow} {
-    font-size: 1.6em;
 
+.subtitlemob {
+  color: white;
+  width: auto;
+  line-height: 1.5em;
+  margin-left: 0;
+  font-size: 3.3vw;
 
-  }
-
-  @media #{$brk-spnarrow} {
-    font-size: 1.3em;
-  }
 }
 
 h4 {
@@ -87,9 +69,15 @@ h4 {
 }
 
 h5 {
-  font-size: 0.7em;
+  font-size: 2.5vw;
   color: white;
-  line-height: 1.4em;
+  line-height: 1.5em;
+}
+
+h6 {
+  font-size: 1.2vw;
+  color: white;
+
 }
 
 .header {
@@ -106,18 +94,17 @@ h5 {
     }
   }
 
-  @media (min-width: 768px) and (max-width: 1280px) {
+  @media (min-width: 769px) and (max-width: 1280px) {
     .header {
       background-color: grey;
       height: 450px;
     }
   }
 
-  @media (min-width: 320px) and (max-width: 767px) {
+  @media (min-width: 320px) and (max-width: 768px) {
     .header {
-    background-image: url('../img/62.jpg');
-    height: 410px;
     margin-top: -7%;
+    height: 500px;
   }
 
 }
@@ -125,7 +112,7 @@ h5 {
 .overlay {
   width: 100%;
   height: 100%;
-  background:black;
+  color:black;
   opacity:0.5;
 
 
@@ -329,7 +316,7 @@ ol, ul {
 
 
 
-@media only screen and (min-width:768px) {
+@media only screen and (min-width:769px) {
   .mobile {
     display:none !important;
     padding-top: 0;
@@ -341,7 +328,7 @@ ol, ul {
 }
 
 //small screen sizes
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .mobile {
     display:block !important;
   }
@@ -413,6 +400,23 @@ h2 span {
   background-color: #f0f0f0;
 }
 
+.mobvideo {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.mobvideo :before {
+    content: '';
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
 
 
 
