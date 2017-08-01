@@ -338,7 +338,7 @@ h5 {
   background: black;
   opacity: 0.5; }
 
-#header-text {
+.header-text {
   position: relative;
   margin-left: 10%;
   margin-right: 10%;
