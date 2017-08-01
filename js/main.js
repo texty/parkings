@@ -1,9 +1,7 @@
 (function(d3){
-    
+    if (window.__this_is_mobile__) return;
     
     var q = d3.queue(1);
-    
-    
 
     var w11 = weirdo()
             .width(600)

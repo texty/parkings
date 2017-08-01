@@ -2,20 +2,8 @@ $c_yellow: #faa619;
 $c_grey: #58595b;
 
 
-//#main-content {
-//  border: 1px solid #6e3671;
-//
-//}
-
-
 .weirdo-container {
   margin-bottom: 250px;
-  //display: inline-block;
-
-  .control-container {
-    //margin-top: 5px;
-    //display:none;
-  }
 
   .control-img-container {
     overflow: hidden;
@@ -59,7 +47,6 @@ $c_grey: #58595b;
     float: left;
     text-align: right;
     padding-right: 7px;
-    //border: 1px solid black;
 
     .caption {
       font-style: italic;
@@ -85,12 +72,6 @@ $c_grey: #58595b;
     height: 1px;
     display: block;
   }
-
-  //
-  //border: 1px solid black;
-  //div, img{
-  //  border: 1px solid black;
-  //}
 
   div.vertical-line {
     border-left: 2px solid white;
@@ -172,7 +153,6 @@ $c_grey: #58595b;
     }
 
     path.line-annotation, #arrowhead {
-      //stroke: black;
       stroke: rgb(140, 148, 148);
       stroke-opacity: 0.87;
       fill: none;
@@ -193,7 +173,6 @@ $c_grey: #58595b;
 
     .area-right {
       fill: $c_yellow;
-      //fill: rgb(140, 148, 148);
       fill-opacity: 0.3;
     }
 
