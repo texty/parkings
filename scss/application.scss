@@ -105,14 +105,14 @@ h6 {
     }
   }
 
-  @media (min-width: 769px) and (max-width: 1280px) {
+  @media (min-width: 768px) and (max-width: 1280px) {
     .header {
       background-color: #f0f0f0;
 
     }
   }
 
-  @media (min-width: 320px) and (max-width: 768px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     .mobheader {
     margin-top: -7%;
   }
@@ -324,7 +324,7 @@ ol, ul {
 
 
 
-@media only screen and (min-width:769px) {
+@media only screen and (min-width:768px) {
   .mobile {
     display:none !important;
     padding-top: 0;
@@ -336,7 +336,7 @@ ol, ul {
 }
 
 //small screen sizes
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .mobile {
     display:block !important;
   }
