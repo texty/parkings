@@ -46,20 +46,19 @@ h1 {
 
   @media #{$brk-narrow} {
     font-size: 3.0em;
-    padding-top: 5%;
 
   }
 
   @media #{$brk-spnarrow} {
-  font-size: 2.4em;
-    padding-top: 1%;
+  font-size: 2.2em;
+    padding-top: 10%;
 
   }
 }
 
 h2 {
   font-size: 2.0em;
-  margin-left: 5%;
+  margin-left: 10%;
 
 
 
@@ -79,9 +78,7 @@ h2 {
   }
 
   @media #{$brk-spnarrow} {
-    font-size: 1.4em;
-
-
+    font-size: 1.3em;
   }
 }
 
@@ -92,6 +89,7 @@ h4 {
 h5 {
   font-size: 0.7em;
   color: white;
+  line-height: 1.4em;
 }
 
 .header {
@@ -216,12 +214,12 @@ p {
 
 
   @media #{$brk-xlarge} {
-    font-size:1.5em;
+    font-size: 1.5em;
     width: 50%;
     margin-left: 15%
   }
   @media #{$brk-large} {
-    font-size:1.5em;
+    font-size: 1.5em;
     width: 50%;
     margin-left: 10%
   }
@@ -239,7 +237,26 @@ p {
 
 }
 
-
+ol, ul {
+  margin-left: 20%;
+  @media #{$brk-xlarge} {
+    width: 50%;
+    margin-left: 15%
+  }
+  @media #{$brk-large} {
+    width: 50%;
+    margin-left: 10%
+  }
+  @media #{$brk-medium} {
+    width: 50%;
+    margin-left: 10%
+  }
+  @media #{$brk-spnarrow} {
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+}
 
 
 
@@ -384,6 +401,17 @@ ol.carousel-indicators {
   margin-top: 20px;
 }
 
+.small {
+  font-size: 1.2em;
+}
+
+.hsmall {
+  font-size: 1.4em;
+}
+
+h2 span {
+  background-color: #f0f0f0;
+}
 
 
 
