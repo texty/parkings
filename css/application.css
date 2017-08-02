@@ -589,4 +589,9 @@ h2 span {
     .carousel {
       margin-right: 5%; } }
 
+.mobgif {
+  position: relative;
+  width: 100%;
+  height: 65vh; }
+
 /*# sourceMappingURL=application.css.map */
