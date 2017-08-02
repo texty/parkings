@@ -327,14 +327,8 @@ p {
 }
 
 
-.glyphicon-chevron-right:before {
-  content: ">";
-  color: black;
-}
-
-.glyphicon-chevron-left:before {
-  content: "<";
-  color: black;
+.glyphicon-chevron-left, .glyphicon-chevron-right {
+  color: #58595b;
 }
 
 .carousel-control.right {

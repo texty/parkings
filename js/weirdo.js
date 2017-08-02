@@ -151,12 +151,12 @@ function weirdo() {
              frame_left
                 .append("div")
                 .attr("class", "caption")
-                .text("потенційний дохід:");
-
+                .html("&nbsp;");
+            //
             var frame_left_text = frame_left
                 .append("div")
                 .attr("class", "number")
-                .text("200%");
+                // .text("200%");
 
             var frame = frame_container
                 .append("div")
@@ -290,7 +290,7 @@ function weirdo() {
 
             var calculations = calculate(data, declared_income, price, handicap_rate);
 
-            frame_left_text.text(uah_format(calculations.potential_income));
+            // frame_left_text.text(uah_format(calculations.potential_income));
             control_left_text.text(percent_format(calculations.fullness));
 
             g.append("path")
