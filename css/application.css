@@ -149,6 +149,7 @@ p {
     padding-left: 40px; }
     .weirdo-container .weirdo-right-inner h2 {
       margin-top: 0;
+      margin-bottom: 0;
       font-size: 2.5em;
       margin-left: 0; }
     .weirdo-container .weirdo-right-inner .breadcrumb > li > a {
@@ -537,13 +538,8 @@ h6 {
 .read-more {
   margin-bottom: 15px; }
 
-.glyphicon-chevron-right:before {
-  content: ">";
-  color: black; }
-
-.glyphicon-chevron-left:before {
-  content: "<";
-  color: black; }
+.glyphicon-chevron-left, .glyphicon-chevron-right {
+  color: #58595b; }
 
 .carousel-control.right {
   background-image: none; }
