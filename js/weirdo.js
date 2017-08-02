@@ -13,7 +13,8 @@ function weirdo() {
         , data
         , declared_income
         , handicap_rate = 1
-        , frame_left_text_format = (function(){ var f = d3.format(".0f"); return function(v) {return f(v) + " ₴"}})()
+        , uah_format = (function(){ var f = d3.format(".0f"); return function(v) {return f(v) + " ₴"}})()
+        , percent_format = d3.format(".0%")
         , price
         , queue
         , curve
@@ -104,7 +105,7 @@ function weirdo() {
             control_left
                 .append("div")
                 .attr("class", "caption")
-                .text("пішло в кишеню:");
+                .text("заповненість парковки:");
 
             var control_left_text = control_left
                 .append("div")
@@ -289,8 +290,8 @@ function weirdo() {
 
             var calculations = calculate(data, declared_income, price, handicap_rate);
 
-            frame_left_text.text(frame_left_text_format(calculations.potential_income));
-            control_left_text.text(frame_left_text_format(calculations.dirty_income));
+            frame_left_text.text(uah_format(calculations.potential_income));
+            control_left_text.text(percent_format(calculations.fullness));
 
             g.append("path")
                 .datum(calculations.left)
@@ -512,6 +513,10 @@ function weirdo() {
         result.potential_income = dashed_sum / 12 * handicap_rate * price;
         result.dirty_income = working_sum / 12 * handicap_rate * price - declared_income;
 
+        var total_cars = data.reduce(summf, 0);
+        var max_cars = d3.max(data, function(d){return d.value});
+
+        result.fullness = total_cars / (max_cars * data.length);
         return result;
     }
 
