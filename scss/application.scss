@@ -128,7 +128,7 @@ h6 {
 
 .header-text {
   position: relative;
-  margin-left: 10%;
+  margin-left: 20%;
   margin-right: 10%;
   padding-top: 5%;
 
@@ -211,17 +211,17 @@ p {
   @media #{$brk-xlarge} {
     font-size: 1.5em;
     width: 50%;
-    margin-left: 15%
+    margin-left: 25%
   }
   @media #{$brk-large} {
     font-size: 1.5em;
     width: 50%;
-    margin-left: 10%
+    margin-left: 25%
   }
   @media #{$brk-medium} {
     font-size: 1.5em;
     width: 50%;
-    margin-left: 10%
+    margin-left: 25%
   }
   @media #{$brk-spnarrow} {
     font-size: 1.5em;
@@ -382,7 +382,8 @@ ol.carousel-indicators {
 }
 
 #video-player {
-  width: 40vw;
+  height: 25vw;
+
 }
 
 .first {
@@ -453,4 +454,13 @@ h2 span {
   }
 
 
+}
+
+.carousel {
+  margin-left: 20%;
+
+  @media #{$brk-spnarrow} {
+    margin-right: 5%;
+
+  }
 }

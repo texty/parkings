@@ -342,7 +342,7 @@ h6 {
 
 .header-text {
   position: relative;
-  margin-left: 10%;
+  margin-left: 20%;
   margin-right: 10%;
   padding-top: 5%; }
 
@@ -398,17 +398,17 @@ h6 {
   p {
     font-size: 1.5em;
     width: 50%;
-    margin-left: 15%; } }
+    margin-left: 25%; } }
 @media (max-width: 1440px) {
   p {
     font-size: 1.5em;
     width: 50%;
-    margin-left: 10%; } }
+    margin-left: 25%; } }
 @media (max-width: 1285px) {
   p {
     font-size: 1.5em;
     width: 50%;
-    margin-left: 10%; } }
+    margin-left: 25%; } }
 @media (max-width: 767px) {
   p {
     font-size: 1.5em;
@@ -531,7 +531,7 @@ ol.carousel-indicators {
   margin-top: 50px; }
 
 #video-player {
-  width: 40vw; }
+  height: 25vw; }
 
 .first {
   margin-top: 20px; }
@@ -582,5 +582,11 @@ h2 span {
   @media (max-width: 767px) {
     .zag {
       width: 90%; } }
+
+.carousel {
+  margin-left: 20%; }
+  @media (max-width: 767px) {
+    .carousel {
+      margin-right: 5%; } }
 
 /*# sourceMappingURL=application.css.map */
