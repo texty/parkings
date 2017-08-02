@@ -149,6 +149,7 @@ p {
     padding-left: 40px; }
     .weirdo-container .weirdo-right-inner h2 {
       margin-top: 0;
+      margin-bottom: 0;
       font-size: 2.5em;
       margin-left: 0; }
     .weirdo-container .weirdo-right-inner .breadcrumb > li > a {

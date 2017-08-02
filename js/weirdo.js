@@ -16,6 +16,7 @@ function weirdo() {
         , uah_format = (function(){ var f = d3.format(".0f"); return function(v) {return f(v) + " ₴"}})()
         , percent_format = d3.format(".0%")
         , price
+        , cars
         , queue
         , curve
         , top_axis_height = 10
@@ -290,7 +291,7 @@ function weirdo() {
 
             var calculations = calculate(data, declared_income, price, handicap_rate);
 
-            // frame_left_text.text(uah_format(calculations.potential_income));
+            // frame_left_text.text(uah_format(calculations.additional_income));
             control_left_text.text(percent_format(calculations.fullness));
 
             g.append("path")
@@ -465,6 +466,12 @@ function weirdo() {
         return my;
     };
 
+    my.cars = function (value) {
+        if (!arguments.length) return cars;
+        cars = value;
+        return my;
+    };
+
     my.queue = function (value) {
         if (!arguments.length) return queue;
         queue = value;
@@ -510,13 +517,22 @@ function weirdo() {
         var working_sum = result.left.reduce(summf, 0)
             +result.right.reduce(summf, 0);
 
-        result.potential_income = dashed_sum / 12 * handicap_rate * price;
-        result.dirty_income = working_sum / 12 * handicap_rate * price - declared_income;
+        result.additional_income = dashed_sum / 12 * handicap_rate * price;
+        result.working_day_income = working_sum / 12 * handicap_rate * price;
+
+        result.dirty_income = result.working_day_income - declared_income;
+        result.extended_working_day_income = result.working_day_income + result.additional_income;
 
         var total_cars = data.reduce(summf, 0);
-        var max_cars = d3.max(data, function(d){return d.value});
+        if (!cars) {
+            cars = d3.max(data, function(d){return d.value});
+        }
 
-        result.fullness = total_cars / (max_cars * data.length);
+        result.fullness = total_cars / (cars * data.length);
+
+        console.log(data[0].date);
+        console.log(result);
+
         return result;
     }
 
