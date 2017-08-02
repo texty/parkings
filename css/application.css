@@ -64,6 +64,7 @@ p {
 
 /* ======== HEADER ======== */
 .logo {
+  background-color: rgba(255, 255, 255, 0.9);
   position: fixed;
   float: left;
   margin: 15px 0px 0px 15px;
