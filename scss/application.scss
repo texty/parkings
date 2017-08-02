@@ -232,30 +232,6 @@ p {
 
 }
 
-ol, ul {
-  margin-left: 20%;
-  @media #{$brk-xlarge} {
-    width: 50%;
-    margin-left: 15%
-  }
-  @media #{$brk-large} {
-    width: 50%;
-    margin-left: 10%
-  }
-  @media #{$brk-medium} {
-    width: 50%;
-    margin-left: 10%
-  }
-  @media #{$brk-spnarrow} {
-    width: 90%;
-    margin-right: 5%;
-    margin-left: 5%;
-  }
-}
-
-
-
-
 .animation-explainer p {
   color:#fff;
   margin-bottom: 100vh;
@@ -402,11 +378,11 @@ h2 span {
   background-color: #f0f0f0;
 }
 
-.mobvideo {
+.mobvideo.header-video{
   position: absolute;
   width: 100%;
   height: 65vh;
-  background-color: rgba(0,0,0,0.5);
+  //background-color: rgba(0,0,0,0.5);
 }
 
 .toarticle {
@@ -452,12 +428,10 @@ h2 span {
   @media #{$brk-spnarrow} {
     width: 90%;
   }
-
-
 }
 
 .carousel {
-  margin-left: 20%;
+  //margin-left: 20%;
 
   @media #{$brk-spnarrow} {
     margin-right: 5%;

@@ -138,7 +138,56 @@ p {
   color: #FAA61A; }
 
 .weirdo-container {
-  margin-bottom: 250px; }
+  margin-bottom: 250px;
+  display: table;
+  width: 100%; }
+  .weirdo-container .weirdo-left, .weirdo-container .weirdo-right {
+    display: table-cell;
+    vertical-align: top; }
+  .weirdo-container .weirdo-right-inner {
+    padding-top: 7px;
+    padding-left: 40px; }
+    .weirdo-container .weirdo-right-inner h2 {
+      margin-top: 0;
+      font-size: 2.5em;
+      margin-left: 0; }
+    .weirdo-container .weirdo-right-inner .breadcrumb > li > a {
+      text-decoration: none; }
+    .weirdo-container .weirdo-right-inner .breadcrumb > li + li:before {
+      padding: 0; }
+    .weirdo-container .weirdo-right-inner .breadcrumb {
+      background: none;
+      margin-left: 0;
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 0;
+      font-size: 1.5em;
+      color: #58595b; }
+      .weirdo-container .weirdo-right-inner .breadcrumb li {
+        color: #58595b; }
+      .weirdo-container .weirdo-right-inner .breadcrumb li.active {
+        color: #faa619;
+        text-decoration: underline; }
+    .weirdo-container .weirdo-right-inner .numbers-table {
+      display: table; }
+      .weirdo-container .weirdo-right-inner .numbers-table .table-row {
+        display: table-row; }
+      .weirdo-container .weirdo-right-inner .numbers-table .table-row > div {
+        padding-top: 10px; }
+      .weirdo-container .weirdo-right-inner .numbers-table .table-row.last-row > div {
+        padding-top: 70px; }
+      .weirdo-container .weirdo-right-inner .numbers-table .number-left {
+        display: table-cell;
+        font-size: 20px;
+        font-weight: 600;
+        color: #faa619;
+        min-width: 100px; }
+      .weirdo-container .weirdo-right-inner .numbers-table .caption-right {
+        display: table-cell;
+        font-size: 1.5em;
+        padding-left: 1em; }
+        .weirdo-container .weirdo-right-inner .numbers-table .caption-right span {
+          color: #ccc; }
   .weirdo-container .control-img-container {
     overflow: hidden;
     position: relative; }
@@ -245,6 +294,8 @@ p {
     stroke: white;
     stroke-width: 2px;
     shape-rendering: auto; }
+  .weirdo-container .top-axis-container {
+    margin-top: 6px; }
   .weirdo-container .top-axis-left .caption {
     margin-top: -8px; }
   .weirdo-container svg.top-axis {
@@ -416,26 +467,6 @@ h6 {
     margin-right: 5%;
     margin-left: 5%; } }
 
-ol, ul {
-  margin-left: 20%; }
-  @media (max-width: 2570px) {
-    ol, ul {
-      width: 50%;
-      margin-left: 15%; } }
-  @media (max-width: 1440px) {
-    ol, ul {
-      width: 50%;
-      margin-left: 10%; } }
-  @media (max-width: 1285px) {
-    ol, ul {
-      width: 50%;
-      margin-left: 10%; } }
-  @media (max-width: 767px) {
-    ol, ul {
-      width: 90%;
-      margin-right: 5%;
-      margin-left: 5%; } }
-
 .animation-explainer p {
   color: #fff;
   margin-bottom: 100vh; }
@@ -545,11 +576,10 @@ ol.carousel-indicators {
 h2 span {
   background-color: #f0f0f0; }
 
-.mobvideo {
+.mobvideo.header-video {
   position: absolute;
   width: 100%;
-  height: 65vh;
-  background-color: rgba(0, 0, 0, 0.5); }
+  height: 65vh; }
 
 .toarticle {
   font-weight: bolder;
@@ -583,11 +613,9 @@ h2 span {
     .zag {
       width: 90%; } }
 
-.carousel {
-  margin-left: 20%; }
-  @media (max-width: 767px) {
-    .carousel {
-      margin-right: 5%; } }
+@media (max-width: 767px) {
+  .carousel {
+    margin-right: 5%; } }
 
 .mobgif {
   position: relative;
