@@ -542,12 +542,17 @@ h6 {
 .glyphicon-chevron-left, .glyphicon-chevron-right {
   color: #58595b; }
 
-.carousel-control.right {
-  background-image: none; }
+#parkings-carousel {
+  width: 680px; }
 
-.carousel-control.left {
+#parkings-carousel, .carousel-inner {
+  overflow: visible; }
+
+.carousel-control {
   background-image: none;
-  margin-left: -5%; }
+  width: 100px; }
+  .carousel-control .left {
+    margin-left: -5%; }
 
 ol.carousel-indicators {
   color: black; }

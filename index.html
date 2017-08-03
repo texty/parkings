@@ -96,7 +96,7 @@
 
 
 
-<p class="first">Парковки — це готівка. Скільки дядько в жилетці комунального підприємства «Київтранспарксервіс» припаркує на вулиці автомобілів, зі скількох і скільки візьме грошей, проконтролювати практично неможливо. Та ті суми, які декларує зараз підприємство, смішні. Наприклад, у липні 2017 року, <a href=http://gis.kievcity.gov.ua/>за даними інформаційної системи «Майно»</a>, найбільше грошей зібрали 5 числа — аж 53 тисячі гривень. За даними київських активістів із Реанімаційного пакету реформ, у місті 6689 паркомісць. Тобто в цей грошовий день одне паркомісце принесло Києву 7 гривень 90 копійок.
+<p class="first">Парковки — це готівка. Скільки дядько в жилетці комунального підприємства «Київтранспарксервіс» припаркує на вулиці автомобілів, зі скількох і скільки візьме грошей, проконтролювати практично неможливо. Та ті суми, які декларує зараз підприємство, смішні. Наприклад, у липні 2017 року, <a href="http://gis.kievcity.gov.ua/" class="dotted">за даними інформаційної системи «Майно»</a>, найбільше грошей зібрали 5 числа — аж 53 тисячі гривень. За даними київських активістів із Реанімаційного пакету реформ, у місті 6689 паркомісць. Тобто в цей грошовий день одне паркомісце принесло Києву 7 гривень 90 копійок.
 </p>
 <p>Ми поставили відеокамери над трьома парковками і порахували, скільки автомобілів реально паркується, та порівняли з офіційними даними щодо грошей, які приносять місту ці парковки. Офіційно київські парковки працюють з 9:00 до 18:00, ми рахували тільки цей проміжок.
 </p>
@@ -111,164 +111,69 @@
 
 <div class="desktop">
     <div class="container">
+        <div class="charts-container">
+            <div id="parkings-carousel" class="carousel slide" data-interval="false">
+                <div class="carousel-inner" role="listbox" style="margin-top: 10px">
+                    <div class="item active">
+                        <div id="w11" class="weirdo-container"></div>
+                        <div id="w12" class="weirdo-container"></div>
+                        <div id="w13" class="weirdo-container"></div>
+                    </div>
 
-        <div id="parkings-carousel" class="carousel slide" data-interval="false">
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox" style="margin-top: 10px">
-                <div class="item active">
-                    <div id="w11" class="weirdo-container">
-                        <div class="weirdo-left"></div>
-                        <div class="weirdo-right">
-                            <div class="weirdo-right-inner">
-                                <h2>Парковка біля ТЦ «Гулівер»</h2>
-                                <div>Вулиця Басейна, 2</div>
+                    <div class="item">
+                        <div id="w21" class="weirdo-container"></div>
+                        <div id="w22" class="weirdo-container"></div>
+                        <div id="w23" class="weirdo-container"></div>
+                    </div>
 
-                                <ul class="breadcrumb">
-                                    <li class="active"><a href="javascript:void(0)">24.05.2017</a></li>
-                                    <li><a href="javascript:void(0)">25.05.2017</a></li>
-                                    <li><a href="javascript:void(0)">26.05.2017</a></li>
-                                </ul>
-
-                                <div class="numbers-table">
-                                    <div class="table-row">
-                                        <div class="number-left">300&nbsp;грн</div>
-                                        <div class="caption-right">Офіційно зібрано <br/><span> (з 9:00 до 18:00)</span></div>
-                                    </div>
-
-                                    <div class="table-row">
-                                        <div class="number-left">1398&nbsp;грн</div>
-                                        <div class="caption-right">Можна було зібрати</div>
-                                    </div>
-
-                                    <div class="table-row last-row">
-                                        <div class="number-left">2032&nbsp;грн</div>
-                                        <div class="caption-right">Можна зібрати якщо розширити час роботи <span>(з 7:00 до 23:00)</span></div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
+                    <div class="item">
+                        <div id="w31" class="weirdo-container"></div>
+                        <div id="w32" class="weirdo-container"></div>
+                        <div id="w33" class="weirdo-container"></div>
                     </div>
                 </div>
 
-                <div class="item">
-                    <div id="w12" class="weirdo-container">
-                        <div class="weirdo-left"></div>
-                        <div class="weirdo-right">
-                            <div class="weirdo-right-inner">
-                                <h2>Парковка біля ТЦ «Гулівер»</h2>
-                            </div>
-
-
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="item">
-                    <div id="w13" class="weirdo-container">
-                        <div class="weirdo-left"></div>
-                        <div class="weirdo-right">
-                            <div class="weirdo-right-inner">
-                                <h2>Парковка біля ТЦ «Гулівер»</h2>
-
-                            </div>
-
-
-
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div id="w21" class="weirdo-container">
-                        <div class="weirdo-left"></div>
-                        <div class="weirdo-right">
-                            <div class="weirdo-right-inner">
-                                <h2>Парковка на Суворова</h2>
-
-                            </div>
-
-
-
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div id="w22" class="weirdo-container">
-                        <div class="weirdo-left"></div>
-                        <div class="weirdo-right">
-                            <div class="weirdo-right-inner">
-
-                                <h2>Парковка на Суворова</h2>
-                            </div>
-
-
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div id="w23" class="weirdo-container">
-                        <div class="weirdo-left"></div>
-                        <div class="weirdo-right">
-                            <div class="weirdo-right-inner">
-                                <h2>Парковка на Суворова</h2>
-
-                            </div>
-
-
-
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div id="w31" class="weirdo-container">
-                        <div class="weirdo-left"></div>
-                        <div class="weirdo-right">
-                            <div class="weirdo-right-inner">
-                                <h2>Парковка біля ІМІ</h2>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div id="w32" class="weirdo-container">
-                        <div class="weirdo-left"></div>
-                        <div class="weirdo-right">
-                            <div class="weirdo-right-inner">
-                                <h2>Парковка біля ІМІ</h2>
-                            </div>
-
-
-
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div id="w33" class="weirdo-container">
-                        <div class="weirdo-left"></div>
-                        <div class="weirdo-right">
-                            <div class="weirdo-right-inner">
-                                <h2>Парковка біля ІМІ</h2>
-                            </div>
-
-
-
-                        </div>
-                    </div>
-                </div>
-
+                <!-- Controls -->
+                <a class="left carousel-control" href="#parkings-carousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Попередня парковка</span>
+                </a>
+                <a class="right carousel-control" href="#parkings-carousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Наступна парковка</span>
+                </a>
             </div>
 
-            <!-- Controls -->
-            <a class="left carousel-control" href="#parkings-carousel" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Попередня парковка</span>
-            </a>
-            <a class="right carousel-control" href="#parkings-carousel" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Наступна парковка</span>
-            </a>
+            <div class="charts-right">
+                <div class="charts-right-inner">
+                    <h2>Парковка біля ТЦ «Гулівер»</h2>
+                    <!--<div>Вулиця Басейна, 2</div>-->
+
+                    <ul class="breadcrumb">
+                        <li class="active"><a href="javascript:void(0)">24.05.2017</a></li>
+                        <li><a href="javascript:void(0)">25.05.2017</a></li>
+                        <li><a href="javascript:void(0)">26.05.2017</a></li>
+                    </ul>
+
+                    <div class="numbers-table">
+                        <div class="table-row">
+                            <div class="number-left">300&nbsp;грн</div>
+                            <div class="caption-right">Офіційно зібрано <br/><span> (з 9:00 до 18:00)</span></div>
+                        </div>
+
+                        <div class="table-row">
+                            <div class="number-left">1398&nbsp;грн</div>
+                            <div class="caption-right">Можна було зібрати</div>
+                        </div>
+
+                        <div class="table-row last-row">
+                            <div class="number-left">2032&nbsp;грн</div>
+                            <div class="caption-right">Можна зібрати якщо розширити час роботи <span>(з 7:00 до 23:00)</span></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

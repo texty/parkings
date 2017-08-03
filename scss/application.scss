@@ -331,13 +331,25 @@ p {
   color: #58595b;
 }
 
-.carousel-control.right {
-  background-image: none;
+#parkings-carousel {
+  width: 680px;
 }
 
-.carousel-control.left {
+#parkings-carousel, .carousel-inner {
+  overflow: visible;
+}
+
+.carousel-control {
   background-image: none;
-  margin-left: -5%;
+  width: 100px;
+
+  .left {
+    margin-left: -5%;
+  }
+
+  .right {
+
+  }
 }
 
 ol.carousel-indicators {

@@ -145,16 +145,16 @@
         ;
 
 
-    d3.select("#w11 .weirdo-left").call(w11);
-    d3.select("#w12 .weirdo-left").call(w12);
-    d3.select("#w13 .weirdo-left").call(w13);
+    d3.select("#w11").call(w11);
+    d3.select("#w12").call(w12);
+    d3.select("#w13").call(w13);
 
-    d3.select("#w21 .weirdo-left").call(w21);
-    d3.select("#w22 .weirdo-left").call(w22);
-    d3.select("#w23 .weirdo-left").call(w23);
+    d3.select("#w21").call(w21);
+    d3.select("#w22").call(w22);
+    d3.select("#w23").call(w23);
 
-    d3.select("#w31 .weirdo-left").call(w31);
-    d3.select("#w32 .weirdo-left").call(w32);
-    d3.select("#w33 .weirdo-left").call(w33);
+    d3.select("#w31").call(w31);
+    d3.select("#w32").call(w32);
+    d3.select("#w33").call(w33);
 })(d3);
 
