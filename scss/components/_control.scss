@@ -1,0 +1,16 @@
+.control-container {
+  padding-top: 10px;
+
+  .control-img-container {
+    position: relative;
+  }
+
+  .vertical-line {
+    border-left: 2px solid white;
+    position: absolute;
+    width: 1px;
+    left: 0;
+    top: 0;
+  }
+
+}

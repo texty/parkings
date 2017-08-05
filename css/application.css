@@ -138,175 +138,169 @@ p {
 .support-site:visited {
   color: #FAA61A; }
 
-.weirdo-container {
-  margin-bottom: 250px;
-  display: table;
-  width: 100%; }
-  .weirdo-container .weirdo-left, .weirdo-container .weirdo-right {
-    display: table-cell;
-    vertical-align: top; }
-  .weirdo-container .weirdo-right-inner {
-    padding-top: 7px;
-    padding-left: 40px; }
-    .weirdo-container .weirdo-right-inner h2 {
-      margin-top: 0;
-      margin-bottom: 0;
-      font-size: 2.5em;
-      margin-left: 0; }
-    .weirdo-container .weirdo-right-inner .breadcrumb > li > a {
-      text-decoration: none; }
-    .weirdo-container .weirdo-right-inner .breadcrumb > li + li:before {
-      padding: 0; }
-    .weirdo-container .weirdo-right-inner .breadcrumb {
-      background: none;
-      margin-left: 0;
-      padding-left: 0;
-      padding-right: 0;
-      padding-top: 0;
-      font-size: 1.5em;
+.display-table {
+  display: table; }
+
+.display-row {
+  display: table-row; }
+
+.display-cell {
+  display: table-cell; }
+
+.vertical-top {
+  vertical-align: top; }
+
+.chart-cell {
+  vertical-align: bottom; }
+
+.cell2 {
+  padding-left: 35px; }
+
+.parking-description {
+  padding-left: 20px;
+  position: relative; }
+  .parking-description h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 2.5em;
+    margin-left: 0; }
+  .parking-description div.address {
+    color: #ccc;
+    font-size: 1.5em;
+    margin-bottom: 18px;
+    margin-top: -5px; }
+  .parking-description .breadcrumb > li > a {
+    text-decoration: underline; }
+  .parking-description .breadcrumb > li + li:before {
+    padding: 10px; }
+  .parking-description ul.breadcrumb {
+    background: none;
+    margin-left: 0;
+    margin-bottom: 0;
+    padding: 0;
+    font-size: 1.5em;
+    color: #58595b; }
+    .parking-description ul.breadcrumb li {
       color: #58595b; }
-      .weirdo-container .weirdo-right-inner .breadcrumb li {
-        color: #58595b; }
-      .weirdo-container .weirdo-right-inner .breadcrumb li.active {
-        color: #faa619;
-        text-decoration: underline; }
-    .weirdo-container .weirdo-right-inner .numbers-table {
-      display: table; }
-      .weirdo-container .weirdo-right-inner .numbers-table .table-row {
-        display: table-row; }
-      .weirdo-container .weirdo-right-inner .numbers-table .table-row > div {
-        padding-top: 10px; }
-      .weirdo-container .weirdo-right-inner .numbers-table .table-row.last-row > div {
-        padding-top: 70px; }
-      .weirdo-container .weirdo-right-inner .numbers-table .number-left {
-        display: table-cell;
-        font-size: 20px;
-        font-weight: 600;
-        color: #faa619;
-        min-width: 100px; }
-      .weirdo-container .weirdo-right-inner .numbers-table .caption-right {
-        display: table-cell;
-        font-size: 1.5em;
-        padding-left: 1em; }
-        .weirdo-container .weirdo-right-inner .numbers-table .caption-right span {
-          color: #ccc; }
-  .weirdo-container .control-img-container {
-    overflow: hidden;
-    position: relative; }
-  .weirdo-container .control-img {
-    width: 100%;
-    height: 100%; }
-  .weirdo-container .frame-container {
-    margin-top: 10px; }
-  .weirdo-container .img-frame {
-    overflow: hidden;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100%; }
-  .weirdo-container .img-frame-overlay {
-    outline: 999px solid rgba(255, 255, 255, 0.1);
-    position: relative;
-    z-index: 1000;
-    background: transparent;
-    border: 1px dashed white; }
-  .weirdo-container .preload-container {
-    overflow: hidden; }
-  .weirdo-container .right {
-    float: right; }
-  .weirdo-container .left {
-    float: left;
-    text-align: right;
-    padding-right: 7px; }
-    .weirdo-container .left .caption {
-      font-style: italic;
-      color: #58595b; }
-    .weirdo-container .left .number {
-      font-size: 20px;
-      font-weight: 600;
+    .parking-description ul.breadcrumb li.active {
       color: #faa619; }
-  .weirdo-container .chart-container {
-    padding-top: 20px; }
-  .weirdo-container .chart-svg-container {
-    overflow: visible; }
-  .weirdo-container .chart-left, .weirdo-container .top-axis-left {
-    height: 1px;
-    display: block; }
-  .weirdo-container div.vertical-line {
+  .parking-description .numbers-table .number-left {
+    font-size: 20px;
+    font-weight: 600;
+    color: #faa619;
+    min-width: 100px; }
+  .parking-description .numbers-table .caption-right {
+    font-size: 1.5em;
+    padding-left: 1em; }
+    .parking-description .numbers-table .caption-right span {
+      color: #ccc; }
+  .parking-description .parking-mini-map {
+    position: absolute;
+    bottom: 0; }
+    .parking-description .parking-mini-map .map-point {
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+      background: #faa619;
+      position: absolute;
+      top: 0;
+      margin-left: -5px;
+      margin-top: -5px;
+      cursor: pointer; }
+    .parking-description .parking-mini-map .map-point.active {
+      border: 4px solid #fff;
+      padding: 4px;
+      margin-left: -9px;
+      margin-top: -9px; }
+    .parking-description .parking-mini-map .minimap-annotation {
+      padding-left: 10px; }
+
+.frame svg.svg-frame-overlay path {
+  stroke: white;
+  stroke-width: 2px;
+  shape-rendering: auto; }
+
+.control-container {
+  padding-top: 10px; }
+  .control-container .control-img-container {
+    position: relative; }
+  .control-container .vertical-line {
     border-left: 2px solid white;
     position: absolute;
     width: 1px;
     left: 0;
     top: 0; }
-  .weirdo-container svg, .weirdo-container text {
-    font-family: "Open Sans", sans-serif; }
-  .weirdo-container svg text {
-    fill: #58595b;
-    stroke: none;
-    font-style: italic; }
-  .weirdo-container svg {
-    shape-rendering: crispEdges;
-    overflow: visible; }
-    .weirdo-container svg .axis path {
-      display: none; }
-    .weirdo-container svg .axis--x text {
-      text-anchor: start; }
-    .weirdo-container svg .tick line {
-      stroke: #58595b;
-      opacity: .3;
-      stroke-width: 1;
-      stroke-dasharray: 2,2; }
-    .weirdo-container svg .line {
-      fill: none;
-      stroke-width: 1.5px;
-      stroke-linecap: round;
-      shape-rendering: auto; }
-    .weirdo-container svg .line-right {
-      stroke: #8c9494;
-      stroke-opacity: 0.87; }
-    .weirdo-container svg .line-left {
-      stroke: #faa619; }
-    .weirdo-container svg .line-dashed {
-      stroke-dasharray: 2, 4;
-      stroke-width: 2px;
-      stroke: #8c9494;
-      stroke-opacity: 0.87; }
-    .weirdo-container svg .line-declared {
-      stroke: #faa619;
-      stroke-width: 2.5px; }
-    .weirdo-container svg path.line-annotation, .weirdo-container svg #arrowhead {
-      stroke: #8c9494;
-      stroke-opacity: 0.87;
-      fill: none;
-      shape-rendering: auto; }
-    .weirdo-container svg circle {
-      fill: #8c9494;
-      fill-opacity: 0.87;
-      shape-rendering: auto; }
-    .weirdo-container svg .area-left {
-      fill: #faa619;
-      fill-opacity: 0.5; }
-    .weirdo-container svg .area-right {
-      fill: #faa619;
-      fill-opacity: 0.3; }
-    .weirdo-container svg .area-dashed {
-      fill: #8c9494;
-      fill-opacity: 0.1; }
-  .weirdo-container svg.svg-frame-overlay path {
-    stroke: white;
-    stroke-width: 2px;
+
+.chart-container svg, .chart-container text, .control-axis svg, .control-axis text {
+  font-family: "Open Sans", sans-serif; }
+.chart-container svg text, .control-axis svg text {
+  fill: #58595b;
+  stroke: none;
+  font-style: italic; }
+.chart-container svg, .control-axis svg {
+  display: block;
+  overflow: visible;
+  shape-rendering: crispEdges; }
+  .chart-container svg .axis path, .control-axis svg .axis path {
+    display: none; }
+  .chart-container svg .axis--x text, .control-axis svg .axis--x text {
+    text-anchor: start; }
+  .chart-container svg .tick line, .control-axis svg .tick line {
+    stroke: #58595b;
+    opacity: .3;
+    stroke-width: 1;
+    stroke-dasharray: 2,2; }
+  .chart-container svg .line, .control-axis svg .line {
+    fill: none;
+    stroke-width: 1.5px;
+    stroke-linecap: round;
     shape-rendering: auto; }
-  .weirdo-container .top-axis-container {
-    margin-top: 6px; }
-  .weirdo-container .top-axis-left .caption {
-    margin-top: -8px; }
-  .weirdo-container svg.top-axis {
-    overflow: visible; }
-    .weirdo-container svg.top-axis text {
-      text-anchor: start; }
-    .weirdo-container svg.top-axis path, .weirdo-container svg.top-axis line {
-      fill: none;
-      stroke: none; }
+  .chart-container svg .line-right, .control-axis svg .line-right {
+    stroke: #8c9494;
+    stroke-opacity: 0.87; }
+  .chart-container svg .line-left, .control-axis svg .line-left {
+    stroke: #faa619; }
+  .chart-container svg .line-dashed, .control-axis svg .line-dashed {
+    stroke-dasharray: 2, 4;
+    stroke-width: 2px;
+    stroke: #8c9494;
+    stroke-opacity: 0.87; }
+  .chart-container svg .line-declared, .control-axis svg .line-declared {
+    stroke: #faa619;
+    stroke-width: 2.5px; }
+  .chart-container svg path.line-annotation, .chart-container svg #arrowhead, .control-axis svg path.line-annotation, .control-axis svg #arrowhead {
+    stroke: #8c9494;
+    stroke-opacity: 0.87;
+    fill: none;
+    shape-rendering: auto; }
+  .chart-container svg circle, .control-axis svg circle {
+    fill: #8c9494;
+    fill-opacity: 0.87;
+    shape-rendering: auto; }
+  .chart-container svg .area-left, .control-axis svg .area-left {
+    fill: #faa619;
+    fill-opacity: 0.5; }
+  .chart-container svg .area-right, .control-axis svg .area-right {
+    fill: #faa619;
+    fill-opacity: 0.3; }
+  .chart-container svg .area-dashed, .control-axis svg .area-dashed {
+    fill: #8c9494;
+    fill-opacity: 0.1; }
+.chart-container svg.svg-frame-overlay path, .control-axis svg.svg-frame-overlay path {
+  stroke: white;
+  stroke-width: 2px;
+  shape-rendering: auto; }
+.chart-container .top-axis-container, .control-axis .top-axis-container {
+  margin-top: 6px; }
+.chart-container .top-axis-left .caption, .control-axis .top-axis-left .caption {
+  margin-top: -8px; }
+.chart-container svg.top-axis, .control-axis svg.top-axis {
+  overflow: visible; }
+  .chart-container svg.top-axis text, .control-axis svg.top-axis text {
+    text-anchor: start; }
+  .chart-container svg.top-axis path, .chart-container svg.top-axis line, .control-axis svg.top-axis path, .control-axis svg.top-axis line {
+    fill: none;
+    stroke: none; }
 
 * {
   margin: 0;

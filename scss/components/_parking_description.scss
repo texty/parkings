@@ -1,0 +1,101 @@
+.parking-description {
+  padding-left: 20px;
+
+  position: relative;
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 2.5em;
+    margin-left: 0;
+  }
+
+  div.address {
+    color: #ccc;
+    font-size: 1.5em;
+    margin-bottom: 18px;
+    margin-top: -5px;
+  }
+
+  .breadcrumb>li>a {
+    text-decoration: underline;
+  }
+
+  .breadcrumb>li+li:before {
+    padding: 10px;
+
+  }
+
+  ul.breadcrumb {
+    background: none;
+    margin-left: 0;
+    margin-bottom: 0;
+
+    padding: 0;
+
+    font-size: 1.5em;
+    color: $c_grey;
+
+    li {
+      color: $c_grey;
+    }
+
+    li.active {
+      color: $c_yellow;
+      //text-decoration: underline;
+    }
+  }
+
+  .numbers-table {
+    .number-left {
+      font-size: 20px;
+      font-weight: 600;
+      color: $c_yellow;
+      min-width: 100px;
+    }
+
+    .caption-right {
+      font-size: 1.5em;
+      padding-left: 1em;
+
+      span {
+        //font-size: 1em;
+        color: #ccc;
+      }
+    }
+  }
+
+  .parking-mini-map {
+    position: absolute;
+    bottom: 0;
+
+    $circle-radius: 5px;
+    $outline-radius: 4px;
+
+    .map-point {
+      border-radius: 50%;
+      width: $circle-radius * 2;
+      height: $circle-radius * 2;
+      background: $c_yellow;
+
+      position: absolute;
+      top: 0;
+      margin-left: -$circle-radius;
+      margin-top: -$circle-radius;
+
+      cursor: pointer;
+    }
+
+    .map-point.active {
+      //background: $c_yellow;
+      border: $outline-radius solid #fff;
+      padding: $outline-radius;
+      margin-left: -($circle-radius + $outline-radius);
+      margin-top: -($circle-radius + $outline-radius);
+    }
+
+    .minimap-annotation {
+      padding-left: 10px;
+    }
+  }
+}
