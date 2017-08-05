@@ -145,13 +145,22 @@
     //     ;
 
 
+    //         .control_height(200)
+    //         .control_image_path("data/2/control/result_2017-06-15.jpg")
+    //         .frames_image_path("data/2/frames/2017-06-15")
+    //         .data(parkings_data["2017-06-15"])
+    //         .declared_income(395)
+    //         .handicap_rate(0.7)
+    //         .cars(31)
+    //         .curve("M365 466 L512 68 Z")
+    //         .queue(q)
+    //         .control_left_top(58)
+    //     ;
+    
     var chart1 = chart()
         .width(530)
         .height(100)
-        .data(parkings_data["2017-05-24"])
-        .declared_income(300)
-        .price(10)
-        .cars(18)
+        .day(parkings_data[0].days[0])
         .queue(q)
     ;
 
@@ -161,7 +170,7 @@
     
     d3.select(".chart-container").call(chart1);
     d3.select(".control-container").call(control1);
-    d3.select(".frame").call(frame1);
+    d3.select(".frame-container").call(frame1);
     
     chart1.onmove(function(xc) {control1.move(xc); frame1.move(xc)});
     control1.onmove(function(xc) {chart1.move(xc); frame1.move(xc)});

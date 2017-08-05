@@ -215,10 +215,20 @@ p {
     .parking-description .parking-mini-map .minimap-annotation {
       padding-left: 10px; }
 
-.frame svg.svg-frame-overlay path {
-  stroke: white;
-  stroke-width: 2px;
-  shape-rendering: auto; }
+.frame-container {
+  position: relative; }
+  .frame-container .frame {
+    position: absolute;
+    left: 0;
+    top: 0; }
+  .frame-container svg.svg-frame-overlay {
+    position: absolute;
+    left: 0;
+    top: 0; }
+    .frame-container svg.svg-frame-overlay path {
+      stroke: white;
+      stroke-width: 2px;
+      shape-rendering: auto; }
 
 .control-container {
   padding-top: 10px; }

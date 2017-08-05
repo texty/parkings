@@ -1,6 +1,17 @@
-.frame {
+.frame-container {
+  position: relative;
+
+  .frame {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
 
   svg.svg-frame-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+
     path {
       stroke: white;
       stroke-width: 2px;

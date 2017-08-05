@@ -5,35 +5,48 @@ function frame() {
         , curve
         , number
         , date
-
+        , frame_list = [0, 1]
         , format = d3.format("02.0f")
-
+        , high_z_index = 10001
+        , low_z_index = 1
+        , overlay_z_index = 10002
         ;
 
 
     function my(selection) {
         selection.each(function() {
 
-            var frame = d3.select(this);
+            var container = d3.select(this);
+            
+            var frames = container
+                .selectAll(".frame")
+                .data(frame_list)
+                .enter()
+                .append("div")
+                .attr("class", "frame")
+                .style("width", inpx(width))
+                .style("height", inpx(height))
+                .style("background-image", function(d) {
+                    return "url('data/" + number + "/" + width + "/frames/" + date + "_" + format(d) + ".jpg')"
+                });
 
-
-            frame
-                .style("background-image", "url('data/" + number + "/" + width + "/first/" + date + ".jpg')");
-                // .style("width", inpx(width))
-                // .style("height", inpx(height));
+            // frame
+            //     .style("background-image", "url('data/" + number + "/" + width + "/first/" + date + ".jpg')");
 
 
             // .on("click", function(){console.log(d3.mouse(this)[0] + "," + d3.mouse(this)[1])});
 
             if (curve) {
-                frame.select("svg.svg-frame-overlay")
-                    // .attr("width", inpx(width))
-                    // .attr("height", inpx(height))
+                container
+                    .append("svg")
+                    .attr("class", "svg-frame-overlay")
+                    .attr("width", inpx(width))
+                    .attr("height", inpx(height))
+                    .style("z-index", overlay_z_index)
                     .append("path")
                     .attr("d", curve);
             }
 
-            
             //
             // var preload = container.append("div")
             //     .attr("class", "preload-container")
@@ -75,12 +88,18 @@ function frame() {
                 var frame_n = Math.floor(offsetScale(xc));
                 if (frame_n == frame_n_) return;
 
-                frame.style("background-image", "url('data/" + number + "/" + width + "/frames/" + date + "_" + format(Math.floor(frame_n / 100)) + ".jpg')");
-                frame.style("background-position", "0px " + -(frame_n % 100) * height + "px");
-                
+
+                // frame.style("background-image", "url('data/" + number + "/" + width + "/frames/" + date + "_" + format(Math.floor(frame_n / 100)) + ".jpg')");
+
+                var img_number = Math.floor(frame_n/100);
+                var offset = -(frame_n % 100) * height;
+
+                frames.style("background-position", function(d) {return d==img_number ? "0px " + offset + "px" : ""});
+                frames.style("z-index", function(d) {return d==img_number ? high_z_index : low_z_index});
+
                 // //todo remove log
-                console.log(xc + " " + frame_n);
-                console.log(frame.style("background-image") + " // " + frame.style("background-position"));
+                // console.log(xc + " " + frame_n);
+                // console.log(frame.style("background-image") + " // " + frame.style("background-position"));
                 frame_n_ = frame_n;
             };
         });

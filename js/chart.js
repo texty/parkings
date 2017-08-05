@@ -2,11 +2,7 @@ function chart() {
 
     var width = 450
         , height = 100
-        , data
-        , declared_income
-        , handicap_rate = 1
-        , price
-        , cars
+        , day
         , queue
         , _onmove = function() {}
         ;
@@ -29,18 +25,18 @@ function chart() {
                 , h = height
                 , g = svg.append("g");
 
-
-            if (!data || declared_income != 0  && !declared_income) {
-                console.error("Data is not set");
-                return;
-            }
-
+            //
+            // if (!data || declared_income != 0  && !declared_income) {
+            //     console.error("Data is not set");
+            //     return;
+            // }
+            
             var x = d3.scaleTime()
-                .domain(d3.extent(data, function(d) {return d.date}))
+                .domain(d3.extent(day.data, function(d) {return d.date}))
                 .range([0, w]);
 
             var y = d3.scaleLinear()
-                .domain([0, d3.max(data, function(d) {return d.value})])
+                .domain([0, d3.max(day.data, function(d) {return d.value})])
                 .range([h, 0]);
 
             var line = d3.line()
@@ -83,47 +79,45 @@ function chart() {
                 .tspans(["кількість", "авто:"], 12)
                 .attr("x", 16);
 
-            var calculations = calculate(data, declared_income, price, handicap_rate);
-
             g.append("path")
-                .datum(calculations.left)
+                .datum(day.calculations.left)
                 .attr("class", "area area-left")
                 .attr("d", area);
 
             g.append("path")
-                .datum(calculations.right)
+                .datum(day.calculations.right)
                 .attr("class", "area area-right")
                 .attr("d", area);
 
             g.append("path")
-                .datum(calculations.left_dashed)
+                .datum(day.calculations.left_dashed)
                 .attr("class", "area area-dashed")
                 .attr("d", area);
 
             g.append("path")
-                .datum(calculations.right_dashed)
+                .datum(day.calculations.right_dashed)
                 .attr("class", "area area-dashed")
                 .attr("d", area);
 
 
 
             g.append("path")
-                .datum(calculations.left_dashed)
+                .datum(day.calculations.left_dashed)
                 .attr("class", "line line-dashed")
                 .attr("d", line);
 
             var path_left = g.append("path")
-                .datum(calculations.left)
+                .datum(day.calculations.left)
                 .attr("class", "line line-left")
                 .attr("d", line);
 
             var path_right = g.append("path")
-                .datum(calculations.right)
+                .datum(day.calculations.right)
                 .attr("class", "line line-right")
                 .attr("d", line);
 
             g.append("path")
-                .datum(calculations.right_dashed)
+                .datum(day.calculations.right_dashed)
                 .attr("class", "line line-dashed")
                 .attr("d", line);
 
@@ -148,7 +142,7 @@ function chart() {
             var circle = g.append("circle")
                 .attr("r", 5)
                 .attr("cx", 0)
-                .attr("cy", y(data[0].value));
+                .attr("cy", y(day.data[0].value));
 
             svg.on("mousemove", mousemove);
 
@@ -156,12 +150,12 @@ function chart() {
                 if (xc < 0 || xc > w) return;
 
                 var date = x.invert(xc);
-                for (var i = 0; i < data.length - 1; i++) {
-                    if (data[i].date <= date && data[i+1].date > date) break;
+                for (var i = 0; i < day.data.length - 1; i++) {
+                    if (day.data[i].date <= date && day.data[i+1].date > date) break;
                 }
 
-                var prev = data[i];
-                var next = data[i+1];
+                var prev = day.data[i];
+                var next = day.data[i+1];
 
                 var ratio = (date.getTime() - prev.date.getTime()) / (5 * 60 * 1000);
                 var v = prev.value + (next.value - prev.value) * ratio;
@@ -201,33 +195,9 @@ function chart() {
         return my;
     };
 
-    my.data = function (value) {
-        if (!arguments.length) return data;
-        data = value;
-        return my;
-    };
-
-    my.declared_income = function (value) {
-        if (!arguments.length) return declared_income;
-        declared_income = value;
-        return my;
-    };
-
-    my.handicap_rate = function (value) {
-        if (!arguments.length) return handicap_rate;
-        handicap_rate = value;
-        return my;
-    };
-
-    my.price = function (value) {
-        if (!arguments.length) return price;
-        price = value;
-        return my;
-    };
-
-    my.cars = function (value) {
-        if (!arguments.length) return cars;
-        cars = value;
+    my.day = function (value) {
+        if (!arguments.length) return day;
+        day = value;
         return my;
     };
 
@@ -240,51 +210,6 @@ function chart() {
 
     function inpx(value) {
         return value + "px";
-    }
-
-    function calculate(data, declared_income) {
-        var result = {};
-
-        var working_data = data.slice(25 - 1, 132 + 1);
-
-        var summ = 0;
-        for (var i = 0; i < working_data.length; i++) {
-            summ += working_data[i].value / 12 * handicap_rate * price;
-            if (summ >= declared_income) break;
-        }
-
-        result.left = working_data.slice(0, i + 1);
-        result.right = working_data.slice(i);
-        result.left_dashed = data.slice(0, 25);
-        result.right_dashed = data.slice(132);
-
-        var dashed_sum = result.left_dashed.reduce(summf, 0)
-            +result.right_dashed.reduce(summf, 0);
-
-        var working_sum = result.left.reduce(summf, 0)
-            +result.right.reduce(summf, 0);
-
-        result.additional_income = dashed_sum / 12 * handicap_rate * price;
-        result.working_day_income = working_sum / 12 * handicap_rate * price;
-
-        result.dirty_income = result.working_day_income - declared_income;
-        result.extended_working_day_income = result.working_day_income + result.additional_income;
-
-        var total_cars = data.reduce(summf, 0);
-        if (!cars) {
-            cars = d3.max(data, function(d){return d.value});
-        }
-
-        result.fullness = total_cars / (cars * data.length);
-
-        console.log(data[0].date);
-        console.log(result);
-
-        return result;
-    }
-
-    function summf(o, v) {
-        return o + v.value;
     }
 
     return my;
