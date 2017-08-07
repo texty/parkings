@@ -7,9 +7,11 @@ function frame() {
         , format = d3.format("02.0f")
         , high_z_index = 101
         , low_z_index = 1
-        , overlay_z_index = 102
+        , first_frame_z_index = 102
+        , overlay_z_index = 103
         ;
 
+    var frames;
 
     function my(selection) {
         selection.each(function() {
@@ -19,7 +21,15 @@ function frame() {
             var width = size.w,
                 height = size.h;
 
-            var frames = container
+            var first_frame = container
+                    .append("div")
+                    .attr("class", "first-frame")
+                    .style("width", inpx(width))
+                    .style("height", inpx(height))
+                    .style("z-index", first_frame_z_index)
+                    .style("background-image", "url('data/" + parking.number + "/" + size.w + "/first/" + day.date + ".jpg')");
+
+            frames = container
                 .selectAll(".frame")
                 .data(frame_list)
                 .enter()
@@ -27,9 +37,8 @@ function frame() {
                 .attr("class", "frame")
                 .style("width", inpx(width))
                 .style("height", inpx(height))
-                .style("background-image", function(d) {
-                    return "url('data/" + parking.number + "/" + width + "/frames/" + day.date + "_" + format(d) + ".jpg')"
-                });
+                .style("z-index", low_z_index);
+
 
             if (size.curve) {
                 container
@@ -42,9 +51,6 @@ function frame() {
                     .attr("d", size.curve);
             }
 
-            container.on('click', function(){console.log(d3.mouse(this))})
-
-            //
             // var preload = container.append("div")
             //     .attr("class", "preload-container")
             //     .style("width", "1px")
@@ -88,6 +94,7 @@ function frame() {
                 var img_number = Math.floor(frame_n/100);
                 var offset = -(frame_n % 100) * height;
 
+                first_frame.style("z-index", low_z_index);
                 frames.style("background-position", function(d) {return d==img_number ? "0px " + offset + "px" : ""});
                 frames.style("z-index", function(d) {return d==img_number ? high_z_index : low_z_index});
                 
@@ -95,6 +102,14 @@ function frame() {
             };
         });
     }
+    
+    my.renderFrame = function () {
+        frames.style("background-image", function(d) {
+            return "url('data/" + parking.number + "/" + size.w + "/frames/" + day.date + "_" + format(d) + ".jpg')"
+        });
+        
+        return my;
+    };
 
     my.size = function (value) {
         if (!arguments.length) return size;

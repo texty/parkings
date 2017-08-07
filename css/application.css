@@ -180,9 +180,9 @@ p {
     padding: 0;
     font-size: 1.5em;
     color: #58595b; }
-    .parking-description ul.breadcrumb li {
+    .parking-description ul.breadcrumb li:focus a, .parking-description ul.breadcrumb li:hover a {
       color: #58595b; }
-    .parking-description ul.breadcrumb li.active {
+    .parking-description ul.breadcrumb li.active a {
       color: #faa619; }
   .parking-description .numbers-table .number-left {
     font-size: 20px;
@@ -216,7 +216,7 @@ p {
 
 .frame-container {
   position: relative; }
-  .frame-container .frame {
+  .frame-container .frame, .frame-container .first-frame {
     position: absolute;
     left: 0;
     top: 0; }
@@ -608,6 +608,6 @@ h2 span {
   margin-bottom: 60px; }
 
 .parking-container {
-  padding-top: 200px; }
+  margin-top: 200px; }
 
 /*# sourceMappingURL=application.css.map */

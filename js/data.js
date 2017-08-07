@@ -13,7 +13,8 @@ var parkings_data = (function(){
             price: 10,
             cars: 18,
             handicap_rate: 1,
-            
+            map: {l: 84, t: 46},
+
             size1: {
                 w: 530,
                 h: 406,
@@ -24,7 +25,6 @@ var parkings_data = (function(){
             size2: {
                 w: 480,
                 h: 368,
-                ch: 200, //todo
                 curve: "M209 153 L217 289 Z"
             },
 
@@ -55,6 +55,7 @@ var parkings_data = (function(){
             price: 7,
             cars: 31,
             handicap_rate: 1,
+            map: {l: 320, t: 58},
 
             size1: {
                 w: 530,
@@ -66,7 +67,6 @@ var parkings_data = (function(){
             size2: {
                 w: 480,
                 h: 374,
-                ch: 200, //todo
                 curve: "M284 364 L412 48 Z"
             },
 
@@ -96,6 +96,7 @@ var parkings_data = (function(){
             price: 7,
             cars: 25,
             handicap_rate: 0.7,
+            map: {l: 16, t: 120},
 
             size1: {
                 w: 530,
@@ -107,7 +108,6 @@ var parkings_data = (function(){
             size2: {
                 w: 480,
                 h: 270,
-                ch: 250, //todo
                 curve: "M3 133 L478 121 Z"
             },
 

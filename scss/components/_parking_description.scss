@@ -37,11 +37,18 @@
     color: $c_grey;
 
     li {
-      color: $c_grey;
+    }
+
+    li:focus, li:hover {
+      a {
+        color: $c_grey;
+      }
     }
 
     li.active {
-      color: $c_yellow;
+      a {
+        color: $c_yellow;
+      }
       //text-decoration: underline;
     }
   }

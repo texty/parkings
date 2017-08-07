@@ -1,170 +1,25 @@
 (function(d3){
     if (window.__this_is_mobile__) return;
     
-    var q = d3.queue(1);
 
-    // var w11 = weirdo()
-    //         .width(600)
-    //         .height(460)
-    //         .control_height(200)
-    //         .control_image_path("data/1/control/result_2017-05-24.jpg")
-    //         .frames_image_path("data/1/frames/2017-05-24")
-    //         // .frame_overlay("72:230:220:186")
-    //         .data(parkings_data["2017-05-24"])
-    //         .declared_income(300)
-    //         .price(10)
-    //         .cars(18)
-    //         .curve("M265 197 L265 367 Z")
-    //         .queue(q)
-    //         .control_left_top(58)
-    //     ;
-    //
-    // var w12 = weirdo()
-    //         .width(600)
-    //         .height(460)
-    //         .control_height(200)
-    //         .control_image_path("data/1/control/result_2017-05-25.jpg")
-    //         .frames_image_path("data/1/frames/2017-05-25")
-    //         // .frame_overlay("72:230:220:186")
-    //         .data(parkings_data["2017-05-25"])
-    //         .declared_income(230)
-    //         .price(10)
-    //         .cars(18)
-    //         .curve("M265 197 L265 367 Z")
-    //         .queue(q)
-    //         .control_left_top(58)
-    //     ;
-    //
-    // var w13 = weirdo()
-    //         .width(600)
-    //         .height(460)
-    //         .control_height(200)
-    //         .control_image_path("data/1/control/result_2017-05-26.jpg")
-    //         .frames_image_path("data/1/frames/2017-05-26")
-    //         // .frame_overlay("72:230:220:186")
-    //         .data(parkings_data["2017-05-26"])
-    //         .declared_income(200)
-    //         .price(10)
-    //         .cars(18)
-    //         .curve("M265 197 L265 367 Z")
-    //         .queue(q)
-    //         .control_left_top(58)
-    //     ;
-    //
-    // var w21 = weirdo()
-    //         .width(600)
-    //         .height(467)
-    //         .control_height(200)
-    //         .control_image_path("data/2/control/result_2017-06-14.jpg")
-    //         .frames_image_path("data/2/frames/2017-06-14")
-    //         .data(parkings_data["2017-06-14"])
-    //         .declared_income(412)
-    //         .handicap_rate(0.7)
-    //         .price(7)
-    //         .cars(31)
-    //         .curve("M365 466 L512 68 Z")
-    //         .queue(q)
-    //         .control_left_top(58)
-    //     ;
-    //
-    // var w22 = weirdo()
-    //         .width(600)
-    //         .height(467)
-    //         .control_height(200)
-    //         .control_image_path("data/2/control/result_2017-06-15.jpg")
-    //         .frames_image_path("data/2/frames/2017-06-15")
-    //         .data(parkings_data["2017-06-15"])
-    //         .declared_income(395)
-    //         .handicap_rate(0.7)
-    //         .price(7)
-    //         .cars(31)
-    //         .curve("M365 466 L512 68 Z")
-    //         .queue(q)
-    //         .control_left_top(58)
-    //     ;
-    //
-    // var w23 = weirdo()
-    //         .width(600)
-    //         .height(467)
-    //         .control_height(200)
-    //         .control_image_path("data/2/control/result_2017-06-16.jpg")
-    //         .frames_image_path("data/2/frames/2017-06-16")
-    //         .data(parkings_data["2017-06-16"])
-    //         .declared_income(387)
-    //         .handicap_rate(0.7)
-    //         .price(7)
-    //         .cars(31)
-    //         .curve("M365 466 L512 68 Z")
-    //         .queue(q)
-    //         .control_left_top(58)
-    //     ;
-    //
-    // var w31 = weirdo()
-    //         .width(600)
-    //         .height(338)
-    //         .control_height(250)
-    //         .control_image_path("data/3/control/result_2017-07-05.jpg")
-    //         .frames_image_path("data/3/frames/2017-07-05")
-    //         .data(parkings_data["2017-07-05"])
-    //         .declared_income(90)
-    //         .price(7)
-    //         .cars(25)
-    //         .curve("M13 168 L586 151 Z")
-    //         .queue(q)
-    //         .control_left_top(85)
-    //     ;
-    //
-    // var w32 = weirdo()
-    //         .width(600)
-    //         .height(338)
-    //         .control_height(250)
-    //         .control_image_path("data/3/control/result_2017-07-06.jpg")
-    //         .frames_image_path("data/3/frames/2017-07-06")
-    //         .data(parkings_data["2017-07-06"])
-    //         .declared_income(37)
-    //         .price(7)
-    //         .cars(25)
-    //         .curve("M13 168 L586 151 Z")
-    //         .queue(q)
-    //         .control_left_top(85)
-    //     ;
-    //
-    // var w33 = weirdo()
-    //         .width(600)
-    //         .height(338)
-    //         .control_height(250)
-    //         .control_image_path("data/3/control/result_2017-07-07.jpg")
-    //         .frames_image_path("data/3/frames/2017-07-07")
-    //         .data(parkings_data["2017-07-07"])
-    //         .declared_income(0) //todo fake data
-    //         .price(7)
-    //         .cars(25)
-    //         .curve("M13 168 L586 151 Z")
-    //         .queue(q)
-    //         .control_left_top(85)
-    //     ;
-
-
-    //         .control_height(200)
-    //         .control_image_path("data/2/control/result_2017-06-15.jpg")
-    //         .frames_image_path("data/2/frames/2017-06-15")
-    //         .data(parkings_data["2017-06-15"])
-    //         .declared_income(395)
-    //         .handicap_rate(0.7)
-    //         .cars(31)
-    //         .curve("M365 466 L512 68 Z")
-    //         .queue(q)
-    //         .control_left_top(58)
-    //     ;
-
+    Handlebars.registerHelper('ifCond', function(v1, v2, options) {
+        console.log(v1);
+        console.log(v2);
+        if(v1 === v2) {
+            return options.fn(this);
+        }
+        return options.inverse(this);
+    });
+    
     var source = $("#parking-card-template").html();
     var template = Handlebars.compile(source);
 
-    function render(context) {
-        var div = d3.select('#main-container').append('div').html(template(context));
+    function render(div, context) {
+        div.html(template(context));
+        renderAxis(div, context.size.w);
 
         var chart1 = chart()
-                .size(context.p.size1)
+                .size(context.size)
                 .height(100)
                 .day(context.day)
             ;
@@ -175,20 +30,50 @@
             .parking(context.p)
             .day(context.day)
             .size(context.size);
-        
+
 
         div.select(".chart-container").call(chart1);
         div.select(".control-container").call(control1);
         div.select(".frame-container").call(frame1);
 
+        frame1.renderFrame();
+
         chart1.onmove(function(xc) {control1.move(xc); frame1.move(xc)});
         control1.onmove(function(xc) {chart1.move(xc); frame1.move(xc)});
+        
+        function renderAxis(div, width) {
+            var axis = {
+                530: '<path class="domain" stroke="#000" d="M0.5,0V0.5H530.5V0"></path><g class="tick" opacity="1" transform="translate(0.5,0)"><text fill="#000" y="8" dy="0.71em">07</text></g><g class="tick" opacity="1" transform="translate(33.625,0)"><text fill="#000" y="8" dy="0.71em">08</text></g><g class="tick" opacity="1" transform="translate(66.75,0)"><text fill="#000" y="8" dy="0.71em">09</text></g><g class="tick" opacity="1" transform="translate(99.875,0)"><text fill="#000" y="8" dy="0.71em">10</text></g><g class="tick" opacity="1" transform="translate(133,0)"><text fill="#000" y="8" dy="0.71em">11</text></g><g class="tick" opacity="1" transform="translate(166.125,0)"><text fill="#000" y="8" dy="0.71em">12</text></g><g class="tick" opacity="1" transform="translate(199.25,0)"><text fill="#000" y="8" dy="0.71em">13</text></g><g class="tick" opacity="1" transform="translate(232.375,0)"><text fill="#000" y="8" dy="0.71em">14</text></g><g class="tick" opacity="1" transform="translate(265.5,0)"><text fill="#000" y="8" dy="0.71em">15</text></g><g class="tick" opacity="1" transform="translate(298.625,0)"><text fill="#000" y="8" dy="0.71em">16</text></g><g class="tick" opacity="1" transform="translate(331.75,0)"><text fill="#000" y="8" dy="0.71em">17</text></g><g class="tick" opacity="1" transform="translate(364.875,0)"><text fill="#000" y="8" dy="0.71em">18</text></g><g class="tick" opacity="1" transform="translate(398,0)"><text fill="#000" y="8" dy="0.71em">19</text></g><g class="tick" opacity="1" transform="translate(431.125,0)"><text fill="#000" y="8" dy="0.71em">20</text></g><g class="tick" opacity="1" transform="translate(464.25,0)"><text fill="#000" y="8" dy="0.71em">21</text></g><g class="tick" opacity="1" transform="translate(497.375,0)"><text fill="#000" y="8" dy="0.71em">22</text></g><g class="tick" opacity="1" transform="translate(530.5,0)"><text fill="#000" y="8" dy="0.71em">23</text></g>',
+                480: '<path class="domain" stroke="#000" d="M0.5,0V0.5H480.5V0"></path><g class="tick" opacity="1" transform="translate(0.5,0)"><text fill="#000" y="8" dy="0.71em">07</text></g><g class="tick" opacity="1" transform="translate(30.5,0)"><text fill="#000" y="8" dy="0.71em">08</text></g><g class="tick" opacity="1" transform="translate(60.5,0)"><text fill="#000" y="8" dy="0.71em">09</text></g><g class="tick" opacity="1" transform="translate(90.5,0)"><text fill="#000" y="8" dy="0.71em">10</text></g><g class="tick" opacity="1" transform="translate(120.5,0)"><text fill="#000" y="8" dy="0.71em">11</text></g><g class="tick" opacity="1" transform="translate(150.5,0)"><text fill="#000" y="8" dy="0.71em">12</text></g><g class="tick" opacity="1" transform="translate(180.5,0)"><text fill="#000" y="8" dy="0.71em">13</text></g><g class="tick" opacity="1" transform="translate(210.5,0)"><text fill="#000" y="8" dy="0.71em">14</text></g><g class="tick" opacity="1" transform="translate(240.5,0)"><text fill="#000" y="8" dy="0.71em">15</text></g><g class="tick" opacity="1" transform="translate(270.5,0)"><text fill="#000" y="8" dy="0.71em">16</text></g><g class="tick" opacity="1" transform="translate(300.5,0)"><text fill="#000" y="8" dy="0.71em">17</text></g><g class="tick" opacity="1" transform="translate(330.5,0)"><text fill="#000" y="8" dy="0.71em">18</text></g><g class="tick" opacity="1" transform="translate(360.5,0)"><text fill="#000" y="8" dy="0.71em">19</text></g><g class="tick" opacity="1" transform="translate(390.5,0)"><text fill="#000" y="8" dy="0.71em">20</text></g><g class="tick" opacity="1" transform="translate(420.5,0)"><text fill="#000" y="8" dy="0.71em">21</text></g><g class="tick" opacity="1" transform="translate(450.5,0)"><text fill="#000" y="8" dy="0.71em">22</text></g><g class="tick" opacity="1" transform="translate(480.5,0)"><text fill="#000" y="8" dy="0.71em">23</text></g>'
+            };
+
+            div.select(".cell1 .control-axis svg g").html(axis[width]);
+        }
     }
+    
+    var q = d3.queue(1);
+    
+    var size = "size1";
+    var main_container = d3.select('#main-container');
 
-    render({p:parkings_data[0], day: parkings_data[0].days[0], size: parkings_data[0].size1});
-    render({p:parkings_data[1], day: parkings_data[1].days[0], size: parkings_data[1].size1});
-    render({p:parkings_data[2], day: parkings_data[2].days[0], size: parkings_data[2].size1});
 
+    parkings_data.forEach(function(p, i) {
+        var parking_group = main_container.append("div")
+            .attr("class", "parking-group")
+            .attr("id", "parking" + (i+1));
+
+        p.days.forEach(function (day, i) {
+            var context = {p: p, day: day, size: p[size], parkings: parkings_data};
+
+            var div = parking_group.append("div").attr("class", "single-parking").classed("hidden", i!=0);
+            render(div, context);
+
+            div.selectAll("ul.breadcrumb li").on("click", function(d, li_index) {
+               parking_group.selectAll("div.single-parking").classed("hidden", function(d,i){ return i!= li_index});
+            });
+
+        });
+    });
 
 })(d3);
 
