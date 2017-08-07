@@ -311,6 +311,12 @@ p {
     fill: none;
     stroke: none; }
 
+#arrowhead {
+  stroke: #8c9494;
+  stroke-opacity: 0.87;
+  fill: none;
+  shape-rendering: auto; }
+
 * {
   margin: 0;
   padding: 0;

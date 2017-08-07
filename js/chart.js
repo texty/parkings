@@ -20,8 +20,6 @@ function chart() {
                 .attr("width", inpx(size.w))
                 .attr("height", inpx(height));
 
-            svg.html('<marker id="arrowhead" viewBox="-10 -10 20 20" refX="0" refY="0" markerWidth="16" markerHeight="16" stroke-width="1" orient="auto"><polyline stroke-linejoin="bevel" points="-6.75,-4.75 0,0 -6.75,4.75"></polyline></marker>');
-
             var w = size.w
                 , h = height
                 , g = svg.append("g");
