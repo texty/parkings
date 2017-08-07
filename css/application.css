@@ -195,8 +195,7 @@ p {
     .parking-description .numbers-table .caption-right span {
       color: #ccc; }
   .parking-description .parking-mini-map {
-    position: absolute;
-    bottom: 0; }
+    position: absolute; }
     .parking-description .parking-mini-map .map-point {
       border-radius: 50%;
       width: 10px;
@@ -543,24 +542,6 @@ h6 {
 .read-more {
   margin-bottom: 15px; }
 
-.glyphicon-chevron-left, .glyphicon-chevron-right {
-  color: #58595b; }
-
-#parkings-carousel {
-  width: 680px; }
-
-#parkings-carousel, .carousel-inner {
-  overflow: visible; }
-
-.carousel-control {
-  background-image: none;
-  width: 100px; }
-  .carousel-control .left {
-    margin-left: -5%; }
-
-ol.carousel-indicators {
-  color: black; }
-
 p.caption {
   font-size: 1.1em;
   text-align: center;
@@ -619,15 +600,14 @@ h2 span {
     .zag {
       width: 90%; } }
 
-@media (max-width: 767px) {
-  .carousel {
-    margin-right: 5%; } }
-
 .mobgif {
   position: relative;
   width: 100%; }
 
 .tab {
   margin-bottom: 60px; }
+
+.parking-container {
+  padding-top: 200px; }
 
 /*# sourceMappingURL=application.css.map */

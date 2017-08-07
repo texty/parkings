@@ -156,24 +156,38 @@
     //         .queue(q)
     //         .control_left_top(58)
     //     ;
-    
-    var chart1 = chart()
-        .width(530)
-        .height(100)
-        .day(parkings_data[0].days[0])
-        .queue(q)
-    ;
 
-    var control1 = control();
-    var frame1 = frame()
-        .width(530).height(406).number(1).date("2017-05-24").curve("M235 177 L235 347 Z");
-    
-    d3.select(".chart-container").call(chart1);
-    d3.select(".control-container").call(control1);
-    d3.select(".frame-container").call(frame1);
-    
-    chart1.onmove(function(xc) {control1.move(xc); frame1.move(xc)});
-    control1.onmove(function(xc) {chart1.move(xc); frame1.move(xc)});
+    var source = $("#parking-card-template").html();
+    var template = Handlebars.compile(source);
+
+    function render(context) {
+        var div = d3.select('#main-container').append('div').html(template(context));
+
+        var chart1 = chart()
+                .size(context.p.size1)
+                .height(100)
+                .day(context.day)
+            ;
+
+        var control1 = control();
+
+        var frame1 = frame()
+            .parking(context.p)
+            .day(context.day)
+            .size(context.size);
+        
+
+        div.select(".chart-container").call(chart1);
+        div.select(".control-container").call(control1);
+        div.select(".frame-container").call(frame1);
+
+        chart1.onmove(function(xc) {control1.move(xc); frame1.move(xc)});
+        control1.onmove(function(xc) {chart1.move(xc); frame1.move(xc)});
+    }
+
+    render({p:parkings_data[0], day: parkings_data[0].days[0], size: parkings_data[0].size2});
+    render({p:parkings_data[1], day: parkings_data[1].days[0], size: parkings_data[1].size2});
+    render({p:parkings_data[2], day: parkings_data[2].days[0], size: parkings_data[2].size2});
 
 
 })(d3);

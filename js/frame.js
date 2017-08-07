@@ -1,15 +1,13 @@
 function frame() {
 
-    var width = 530
-        , height = 406
-        , curve
-        , number
-        , date
+    var size
+        , day
+        , parking
         , frame_list = [0, 1]
         , format = d3.format("02.0f")
-        , high_z_index = 10001
+        , high_z_index = 101
         , low_z_index = 1
-        , overlay_z_index = 10002
+        , overlay_z_index = 102
         ;
 
 
@@ -17,7 +15,10 @@ function frame() {
         selection.each(function() {
 
             var container = d3.select(this);
-            
+
+            var width = size.w,
+                height = size.h;
+
             var frames = container
                 .selectAll(".frame")
                 .data(frame_list)
@@ -27,16 +28,10 @@ function frame() {
                 .style("width", inpx(width))
                 .style("height", inpx(height))
                 .style("background-image", function(d) {
-                    return "url('data/" + number + "/" + width + "/frames/" + date + "_" + format(d) + ".jpg')"
+                    return "url('data/" + parking.number + "/" + width + "/frames/" + day.date + "_" + format(d) + ".jpg')"
                 });
 
-            // frame
-            //     .style("background-image", "url('data/" + number + "/" + width + "/first/" + date + ".jpg')");
-
-
-            // .on("click", function(){console.log(d3.mouse(this)[0] + "," + d3.mouse(this)[1])});
-
-            if (curve) {
+            if (size.curve) {
                 container
                     .append("svg")
                     .attr("class", "svg-frame-overlay")
@@ -44,8 +39,10 @@ function frame() {
                     .attr("height", inpx(height))
                     .style("z-index", overlay_z_index)
                     .append("path")
-                    .attr("d", curve);
+                    .attr("d", size.curve);
             }
+
+            container.on('click', function(){console.log(d3.mouse(this))})
 
             //
             // var preload = container.append("div")
@@ -88,50 +85,32 @@ function frame() {
                 var frame_n = Math.floor(offsetScale(xc));
                 if (frame_n == frame_n_) return;
 
-
-                // frame.style("background-image", "url('data/" + number + "/" + width + "/frames/" + date + "_" + format(Math.floor(frame_n / 100)) + ".jpg')");
-
                 var img_number = Math.floor(frame_n/100);
                 var offset = -(frame_n % 100) * height;
 
                 frames.style("background-position", function(d) {return d==img_number ? "0px " + offset + "px" : ""});
                 frames.style("z-index", function(d) {return d==img_number ? high_z_index : low_z_index});
-
-                // //todo remove log
-                // console.log(xc + " " + frame_n);
-                // console.log(frame.style("background-image") + " // " + frame.style("background-position"));
+                
                 frame_n_ = frame_n;
             };
         });
     }
 
-    my.width = function(value) {
-        if (!arguments.length) return width;
-        width = value;
+    my.size = function (value) {
+        if (!arguments.length) return size;
+        size = value;
         return my;
     };
 
-    my.height = function (value) {
-        if (!arguments.length) return height;
-        height = value;
+    my.day = function (value) {
+        if (!arguments.length) return day;
+        day = value;
         return my;
     };
 
-    my.curve = function (value) {
-        if (!arguments.length) return curve;
-        curve = value;
-        return my;
-    };
-
-    my.number = function (value) {
-        if (!arguments.length) return number;
-        number = value;
-        return my;
-    };
-
-    my.date = function (value) {
-        if (!arguments.length) return date;
-        date = value;
+    my.parking = function (value) {
+        if (!arguments.length) return parking;
+        parking = value;
         return my;
     };
 

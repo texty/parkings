@@ -330,36 +330,6 @@ p {
   margin-bottom: 15px;
 }
 
-
-.glyphicon-chevron-left, .glyphicon-chevron-right {
-  color: #58595b;
-}
-
-#parkings-carousel {
-  width: 680px;
-}
-
-#parkings-carousel, .carousel-inner {
-  overflow: visible;
-}
-
-.carousel-control {
-  background-image: none;
-  width: 100px;
-
-  .left {
-    margin-left: -5%;
-  }
-
-  .right {
-
-  }
-}
-
-ol.carousel-indicators {
-  color: black;
-}
-
 p.caption {
   font-size: 1.1em;
   text-align: center;
@@ -441,14 +411,6 @@ h2 span {
   }
 }
 
-.carousel {
-  //margin-left: 20%;
-
-  @media #{$brk-spnarrow} {
-    margin-right: 5%;
-
-  }
-}
 
 .mobgif {
   position: relative;
@@ -457,4 +419,8 @@ h2 span {
 
 .tab {
   margin-bottom: 60px;
+}
+
+.parking-container {
+  padding-top: 200px;
 }

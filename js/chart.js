@@ -4,6 +4,7 @@ function chart() {
         , height = 100
         , day
         , queue
+        , size
         , _onmove = function() {}
         ;
 
@@ -12,24 +13,19 @@ function chart() {
         selection.each(function() {
 
             var chart_container = d3.select(this)
-                .style("width", inpx(width));
+                .style("width", inpx(size.w));
             
             var svg = chart_container
                 .append("svg")
-                .attr("width", inpx(width))
+                .attr("width", inpx(size.w))
                 .attr("height", inpx(height));
 
             svg.html('<marker id="arrowhead" viewBox="-10 -10 20 20" refX="0" refY="0" markerWidth="16" markerHeight="16" stroke-width="1" orient="auto"><polyline stroke-linejoin="bevel" points="-6.75,-4.75 0,0 -6.75,4.75"></polyline></marker>');
 
-            var w = width
+            var w = size.w
                 , h = height
                 , g = svg.append("g");
-
-            //
-            // if (!data || declared_income != 0  && !declared_income) {
-            //     console.error("Data is not set");
-            //     return;
-            // }
+            
             
             var x = d3.scaleTime()
                 .domain(d3.extent(day.data, function(d) {return d.date}))
@@ -176,6 +172,12 @@ function chart() {
             my.move = move;
         });
     }
+
+    my.size = function (value) {
+        if (!arguments.length) return size;
+        size = value;
+        return my;
+    };
 
     my.width = function(value) {
         if (!arguments.length) return width;
