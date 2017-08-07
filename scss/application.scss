@@ -107,6 +107,7 @@ h6 {
       background-color: #f0f0f0;
       //height: 450px;
     }
+
   }
 
   @media (min-width: 768px) and (max-width: 1280px) {
@@ -118,7 +119,7 @@ h6 {
 
   @media (min-width: 320px) and (max-width: 767px) {
     .mobheader {
-    margin-top: -7%;
+    //margin-top: -7%;
   }
 }
 
@@ -132,7 +133,7 @@ h6 {
 
 .header-text {
   position: relative;
-  margin-left: 20%;
+  margin-left: 12%;
   margin-right: 10%;
   padding-top: 5%;
 
@@ -145,6 +146,10 @@ h6 {
     margin-left: 8%;
     margin-right: 2%;
     top: 12%;}
+
+    h3 {
+      padding-top: 10px;
+    }
 }
 
 

@@ -1,17 +1,22 @@
 (function(d3){
-    if (window.__this_is_mobile__) return;
+    if (window.__this_is_mobile__ == "mobile") return;
+    var width;
+    if (window.__this_is_mobile__ == "middle") {
+        width = 480;
+        size = "size2"
+    } else {
+        width = 530;
+        size = "size1"
+    }
     
-
     Handlebars.registerHelper('ifCond', function(v1, v2, options) {
-        console.log(v1);
-        console.log(v2);
         if(v1 === v2) {
             return options.fn(this);
         }
         return options.inverse(this);
     });
-    
-    var source = $("#parking-card-template").html();
+
+    var source = $("#parking-card-template-" + width).html();
     var template = Handlebars.compile(source);
 
     function render(div, context) {
@@ -38,8 +43,13 @@
 
         frame1.renderFrame();
 
-        chart1.onmove(function(xc) {control1.move(xc); frame1.move(xc)});
-        control1.onmove(function(xc) {chart1.move(xc); frame1.move(xc)});
+
+        if (width == 530) {
+            control1.onmove(function(xc) {chart1.move(xc); frame1.move(xc)});
+            chart1.onmove(function(xc) {control1.move(xc); frame1.move(xc)});
+        } else {
+            chart1.onmove(function(xc) {frame1.move(xc)});
+        }
         
         function renderAxis(div, width) {
             var axis = {
@@ -53,7 +63,6 @@
     
     var q = d3.queue(1);
     
-    var size = "size1";
     var main_container = d3.select('#main-container');
 
 

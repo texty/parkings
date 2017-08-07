@@ -63,11 +63,16 @@
 
     .caption-right {
       font-size: 1.5em;
-      padding-left: 1em;
 
       span {
         //font-size: 1em;
         color: #ccc;
+      }
+    }
+
+    .middle {
+      .caption-right {
+        padding-left: 0;
       }
     }
   }
@@ -103,6 +108,32 @@
 
     .minimap-annotation {
       padding-left: 10px;
+    }
+  }
+}
+
+.middle .parking-description {
+  padding-left: 5px;
+
+
+  .numbers-table {
+    .number-left {
+      font-size: 20px;
+      font-weight: 600;
+      color: $c_yellow;
+      min-width: 100px;
+    }
+
+    .caption-right {
+      font-size: 1.5em;
+
+      span {
+        //font-size: 1em;
+        color: #ccc;
+      }
+    }
+    .caption-right {
+      padding-left: 0;
     }
   }
 }

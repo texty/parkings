@@ -49,7 +49,7 @@ var parkings_data = (function(){
         },
         {
             name: "Парковка біля ЄП",
-            address: "вулиця Суворова, 66",  //todo
+            address: "вулиця Суворова, 4",  //todo
             number: 2,
             
             price: 7,
@@ -90,7 +90,7 @@ var parkings_data = (function(){
         },
         {
             name: "Парковка біля ІМІ",
-            address: "вулиця Велика Васильківська, 42", //todo
+            address: "вулиця Велика Васильківська, 58-50/23", //todo
             number: 3,
             
             price: 7,
