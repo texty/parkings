@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,cAAe;EAAC,OAAO,EAAE,KAAK;;AAC9B,YAAa;EAAC,OAAO,EAAE,SAAS;;AAChC,aAAc;EAAC,OAAO,EAAE,UAAU;;AAClC,aAAc;EAAC,cAAc,EAAE,GAAG;;AAElC,WAAY;EAAC,cAAc,EAAE,MAAM",
+"sources": ["../components/table-layout.scss"],
+"names": [],
+"file": "table-layout.css"
+}

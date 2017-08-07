@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGI,iCAAK;EACH,MAAM,EAAE,KAAK;EACb,YAAY,EAAE,GAAG;EAEjB,eAAe,EAAE,IAAI",
+"sources": ["../components/frame.scss"],
+"names": [],
+"file": "frame.css"
+}
