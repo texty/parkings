@@ -185,9 +185,9 @@
         control1.onmove(function(xc) {chart1.move(xc); frame1.move(xc)});
     }
 
-    render({p:parkings_data[0], day: parkings_data[0].days[0], size: parkings_data[0].size2});
-    render({p:parkings_data[1], day: parkings_data[1].days[0], size: parkings_data[1].size2});
-    render({p:parkings_data[2], day: parkings_data[2].days[0], size: parkings_data[2].size2});
+    render({p:parkings_data[0], day: parkings_data[0].days[0], size: parkings_data[0].size1});
+    render({p:parkings_data[1], day: parkings_data[1].days[0], size: parkings_data[1].size1});
+    render({p:parkings_data[2], day: parkings_data[2].days[0], size: parkings_data[2].size1});
 
 
 })(d3);
