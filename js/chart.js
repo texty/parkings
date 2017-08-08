@@ -138,7 +138,8 @@ function chart() {
                 .attr("cx", 0)
                 .attr("cy", y(day.data[0].value));
 
-            svg.on("mousemove", mousemove);
+            svg.on("mousemove", mousemove)
+                .on("touchmove", touchmove);
 
             function move(xc) {
                 if (xc < 0 || xc > w) return;
@@ -162,6 +163,13 @@ function chart() {
 
             function mousemove() {
                 var xc = d3.mouse(this)[0];
+
+                move(xc);
+                _onmove(xc);
+            }
+
+            function touchmove() {
+                var xc = d3.touches(this)[0][0];
 
                 move(xc);
                 _onmove(xc);

@@ -17,7 +17,8 @@ function control() {
             var control_line = container
                 .select(".vertical-line");
             
-            control_img.on("mousemove", mousemove);
+            control_img.on("mousemove", mousemove)
+                .on("touchmove", touchmove);
 
             function move(xc) {
                 if (xc < 0 || xc > width) return;
@@ -32,6 +33,14 @@ function control() {
                 move(xc);
                 _onmove(xc);
             }
+            
+            function touchmove() {
+                var xc = d3.touches(this)[0][0];
+
+                move(xc);
+                _onmove(xc);
+            }
+            
             
             my.move = move;
         });

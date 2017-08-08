@@ -105,12 +105,16 @@ p {
   margin-bottom: 15px;
 }
 
-p.caption {
-  font-size: 1.1em;
-  text-align: center;
-  //font-style: italic;
-  text-transform: uppercase;
-  margin-top: 50px;
+.mobile {
+  p.caption {
+    font-size: 2em;
+    text-align: center;
+    //font-style: italic;
+    //text-transform: uppercase;
+    margin-top: 50px;
+
+    padding-bottom: 0;
+  }
 }
 
 
@@ -154,8 +158,10 @@ h2 span {
 }
 
 
-
-
-.parking-container {
+.parking-group {
   margin-top: 200px;
+}
+
+.parking-group:first-child {
+  margin-top: 20px;
 }
