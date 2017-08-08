@@ -309,7 +309,7 @@ p {
 
 
 
-@media only screen and (min-width:768px) {
+@media only screen and (min-width:800px) {
   .mobile {
     display:none !important;
     padding-top: 0;
@@ -321,7 +321,7 @@ p {
 }
 
 //small screen sizes
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 799px) {
   .mobile {
     display:block !important;
   }

@@ -131,7 +131,7 @@ p {
     .copying-info {
       padding-top: 10px;
       font-size: 0.5em; } }
-  @media (max-width: 800px) {
+  @media (max-width: 767px) {
     .copying-info {
       padding-top: 10px; } }
 
@@ -200,7 +200,8 @@ p {
   .parking-description .numbers-table .middle .caption-right {
     padding-left: 0; }
   .parking-description .parking-mini-map {
-    position: absolute; }
+    position: relative;
+    margin-top: 10px; }
     .parking-description .parking-mini-map .map-point {
       border-radius: 50%;
       width: 10px;
@@ -490,7 +491,7 @@ h6 {
     font-size: 1.5em;
     width: 50%;
     margin-left: 25%; } }
-@media (max-width: 800px) {
+@media (max-width: 767px) {
   p {
     font-size: 1.5em;
     width: 90%;
@@ -529,7 +530,7 @@ h6 {
     position: relative;
     left: 0em;
     top: 0.5em; }
-    @media (max-width: 800px) {
+    @media (max-width: 767px) {
       .quote::before {
         font-size: 7em; } }
 
@@ -551,14 +552,14 @@ h6 {
 .new-section {
   margin-top: 5%; }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 800px) {
   .mobile {
     display: none !important;
     padding-top: 0; }
 
   .desktop {
     display: block !important; } }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 799px) {
   .mobile {
     display: block !important; }
 
@@ -608,7 +609,7 @@ h2 span {
       width: 45%;
       margin-left: 15%;
       margin-right: 5%; } }
-  @media (max-width: 800px) {
+  @media (max-width: 767px) {
     .lid {
       width: 90%;
       margin-left: 5%;
@@ -621,7 +622,7 @@ h2 span {
   @media (max-width: 2570px) {
     .zag {
       width: 50%; } }
-  @media (max-width: 800px) {
+  @media (max-width: 767px) {
     .zag {
       width: 90%; } }
 

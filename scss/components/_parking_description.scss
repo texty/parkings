@@ -78,7 +78,8 @@
   }
 
   .parking-mini-map {
-    position: absolute;
+    position: relative;
+    margin-top: 10px;
     //bottom: 0;
 
     $circle-radius: 5px;

@@ -6,7 +6,7 @@ var parkings_data = (function(){
 
     var parkings = [
         {
-            name: "Парковка біля ТЦ «Гулівер»",
+            name: "Парковка на Басейній 12",
             address: "вулиця Басейна, 12",
             number: 1,
             
@@ -48,7 +48,7 @@ var parkings_data = (function(){
             ]
         },
         {
-            name: "Парковка біля ЄП",
+            name: "Парковка на Суворова, 4",
             address: "вулиця Суворова, 4",  //todo
             number: 2,
             
