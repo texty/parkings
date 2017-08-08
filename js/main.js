@@ -1,6 +1,16 @@
 (function(d3){
-    if (window.__this_is_mobile__ == "mobile") return;
+    if (window.__this_is_mobile__ == "mobile") {
+        // or if you have multiple videos:
+        $('video').each(function () {
+            enableInlineVideo(this);
+            setTimeout(function () { this.play(); }, 500); // example
+        });
+        return;
+    }
+
+    var size;
     var width;
+
     if (window.__this_is_mobile__ == "middle") {
         width = 480;
         size = "size2"
