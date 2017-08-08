@@ -13,6 +13,7 @@
   position: fixed;
   padding-top: 10px;
   z-index: 1000;
+  right: 15px;
 }
 
 .fa-twitter,
@@ -168,11 +169,7 @@
   }
 
   h3 {
-    span.myglitch:first-child{
-      @include textGlitch("myglitch", 47, white, rgba(0, 0, 0, 0.25), red, blue, 450, 115);
-    }
-
-    span.myglitch:last-child{
+    span.myglitch{
       @include textGlitch("myglitch", 47, white, rgba(0, 0, 0, 0.25), red, blue, 450, 115);
     }
 
