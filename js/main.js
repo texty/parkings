@@ -3,7 +3,7 @@
         // or if you have multiple videos:
         $('video').each(function () {
             enableInlineVideo(this);
-            setTimeout(function () { this.play(); }, 500); // example
+            setTimeout(function () { if (this.play) this.play(); }, 500); // example
         });
         return;
     }
