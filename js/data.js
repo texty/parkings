@@ -6,7 +6,7 @@ var parkings_data = (function(){
 
     var parkings = [
         {
-            name: "Парковка на Басейній, 12",
+            name: "Басейна, 12",
             address: "вулиця Басейна, 12",
             number: 1,
             
@@ -48,7 +48,7 @@ var parkings_data = (function(){
             ]
         },
         {
-            name: "Парковка на Суворова, 4",
+            name: "Суворова, 4",
             address: "вулиця Суворова, 4",
             number: 2,
             
@@ -89,7 +89,7 @@ var parkings_data = (function(){
             ]
         },
         {
-            name: "Парковка на Великій Васильківській, 58-50/23",
+            name: "Велика Васильківська, 58-50/23",
             address: "вулиця Велика Васильківська, 58-50/23",
             number: 3,
             
