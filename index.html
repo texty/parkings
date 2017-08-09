@@ -129,7 +129,7 @@
 
 
 <div class="desktop">
-    <div class="container">
+    <div class="container desktop-container">
         <div class="row">
             <div class="col-xs-12">
                 <svg width="0px" height="0px">
@@ -281,23 +281,6 @@
                             </div>
                         </div>
 
-                        <div class="parking-mini-map display-table">
-                            <img src="img/minimap.png" class="display-cell" alt="карта-локатор" style="width:400px;">
-
-                            {{#each parkings}}
-                                {{#ifCond @root.p.number this.number}}
-                            <a href="#parking{{this.number}}"><div class="map-point active" style="left: {{this.map.l}}px; top: {{this.map.t}}px;"></div></a>
-                                {{else}}
-                            <a href="#parking{{this.number}}"><div class="map-point" style="left: {{this.map.l}}px; top: {{this.map.t}}px;"></div></a>
-                                {{/ifCond}}
-                            {{/each}}
-
-                            <div class="display-cell vertical-top minimap-annotation">
-                                Клікайте по парковці на карті щоб побачити відео
-                            </div>
-
-                        </div>
-
                     </div>
                 </div>
             </div>
@@ -382,21 +365,6 @@
                             </div>
                         </div>
 
-                        <div class="parking-mini-map display-table">
-                            <img src="img/minimap.png" class="display-cell" alt="карта-локатор" style="width:400px;">
-
-                            {{#each parkings}}
-                            {{#ifCond @root.p.number this.number}}
-                            <a href="#parking{{this.number}}"><div class="map-point active" style="left: {{this.map.l}}px; top: {{this.map.t}}px;"></div></a>
-                            {{else}}
-                            <a href="#parking{{this.number}}"><div class="map-point" style="left: {{this.map.l}}px; top: {{this.map.t}}px;"></div></a>
-                            {{/ifCond}}
-                            {{/each}}
-
-                            <div class="display-cell vertical-top minimap-annotation">
-                                Клікайте по парковці на карті щоб побачити відео
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -427,7 +395,7 @@
 
 <script src="lib/jquery-2.1.4.min.js" type="text/javascript"></script>
 <script src="lib/bootstrap.min.js" type="text/javascript"></script>
-<script src="lib/d3.v4.parkings.min.js"></script>
+<script src="lib/d3.v4.min.js"></script>
 <script src="lib/d3-jetpack.js"></script>
 <script src="lib/moment.min.js"></script>
 <script src="lib/handlebars.min.js"></script>

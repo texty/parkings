@@ -5,6 +5,7 @@ function chart() {
         , day
         , queue
         , size
+        , touch
         , _onmove = function() {}
         ;
 
@@ -133,10 +134,43 @@ function chart() {
                 .tspans(["час за який заявлений добовий", "дохід зароблено"], 12)
                 .attr("x", 10);
 
+            var touch_width = 10, touch_height = 40;
+
+            var touch_bar = g.append("g")
+                .attr("class", "touchbar" + (touch ? " touch" : ""));
+
+            if (touch) {
+                touch_bar.append("rect")
+                    .attr("x", -touch_width/2)
+                    .attr("y", 0)
+                    .attr("width", touch_width)
+                    .attr("height", h)
+                    .call(d3.drag().on("drag", dragged));
+
+                touch_bar.append("line")
+                    .attr("x1", -touch_width/2).attr("x2", -touch_width/2)
+                    .attr("y1", h/2 - touch_height/2)
+                    .attr("y2", h/2 + touch_height/2);
+
+                touch_bar.append("line")
+                    .attr("x1", touch_width/2).attr("x2", touch_width/2)
+                    .attr("y1", h/2 - touch_height/2)
+                    .attr("y2", h/2 + touch_height/2);
+            }
+
+            touch_bar.append("line")
+                .attr("x1", 0).attr("x2", 0)
+                .attr("y1", 0)
+                .attr("y2", h);
+
+
             var circle = g.append("circle")
-                .attr("r", 5)
+                .attr("r", touch ? 1 : 5)
                 .attr("cx", 0)
                 .attr("cy", y(day.data[0].value));
+
+            if (touch) circle.attr("class", "touch");
+
 
             svg.on("mousemove", mousemove)
                 .on("touchmove", touchmove);
@@ -159,6 +193,8 @@ function chart() {
                 circle
                     .attr("cx", xc)
                     .attr("cy", yc);
+
+                touch_bar.translate([xc, 0]);
             }
 
             function mousemove() {
@@ -174,6 +210,14 @@ function chart() {
                 move(xc);
                 _onmove(xc);
             }
+
+            function dragged() {
+                var xc = d3.event.x;
+
+                move(xc);
+                _onmove(xc);
+            }
+
 
             my.move = move;
         });
@@ -206,6 +250,12 @@ function chart() {
     my.day = function (value) {
         if (!arguments.length) return day;
         day = value;
+        return my;
+    };
+
+    my.touch = function (value) {
+        if (!arguments.length) return touch;
+        touch = value;
         return my;
     };
 

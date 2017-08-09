@@ -8,15 +8,19 @@
         return;
     }
 
-    var size;
-    var width;
+    var size, width, touch;
 
     if (window.__this_is_mobile__ == "middle") {
         width = 480;
-        size = "size2"
+        size = "size2";
+        touch = true;
+        d3.select(".desktop-container").classed("container", false).classed("container-fluid", true);
+        d3.select(".desktop-container > .row").classed("row", false).classed("row-fluid", true);
+
     } else {
         width = 530;
-        size = "size1"
+        size = "size1";
+        touch = false;
     }
     
     Handlebars.registerHelper('ifCond', function(v1, v2, options) {
@@ -37,6 +41,7 @@
                 .size(context.size)
                 .height(100)
                 .day(context.day)
+                .touch(touch)
             ;
 
         var control1 = control();

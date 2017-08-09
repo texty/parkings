@@ -5,6 +5,16 @@
   }
 
   svg text {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  svg text::selection {
+    background: none;
+  }
+
+  svg text {
     fill: $c_grey;
     stroke: none;
     font-style: italic;
@@ -81,6 +91,46 @@
       fill: rgb(140, 148, 148);
       fill-opacity: 0.87;
       shape-rendering: auto;
+    }
+
+    circle.touch {
+      fill: #fff;
+      fill-opacity: 1;
+    }
+
+    g.touchbar {
+      line {
+        stroke: rgb(140, 148, 148);
+        fill: none;
+        stroke-width: 1px;
+        shape-rendering: crispEdges;
+      }
+
+      rect {
+        fill: #fff;
+        fill-opacity: 0;
+        shape-rendering: auto;
+      }
+
+      //rect, line {
+      //  cursor: col-resize;
+      //}
+    }
+
+    g.touchbar.touch {
+      line {
+        stroke-width: 2px;
+      }
+
+      rect {
+        fill: #fff;
+        fill-opacity: 0;
+        shape-rendering: auto;
+      }
+
+      rect, line {
+        cursor: col-resize;
+      }
     }
 
     .area-left {
