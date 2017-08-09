@@ -118,14 +118,14 @@ function chart() {
 
             var annotation_g = g.append("g")
                 .attr("class", "g-annotation")
-                .translate([100, 0]);
+                .translate([120, 0]);
 
             annotation_g
                 .append("path")
                 .attr("class", "line line-annotation")
                 .attr('marker-end', 'url(#arrowhead)')
                 // .attr("d", "M -35, -35 C -20, -35, 0, -25, 0, 0")
-                .attr("d", "M 0, -35 C -10, -25, -10, -10, 0, 0");
+                .attr("d", "M 0, -35 C -10, -35, -25, -25, -25, 0");
 
             annotation_g
                 .append("text")

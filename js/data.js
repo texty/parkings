@@ -15,6 +15,8 @@ var parkings_data = (function(){
             handicap_rate: 1,
             map: {l: 84, t: 46},
 
+            curve: "M50,81 L47,41 42,41 39,81Z",
+
             size1: {
                 w: 530,
                 h: 406,
@@ -54,8 +56,10 @@ var parkings_data = (function(){
             
             price: 7,
             cars: 31,
-            handicap_rate: 1,
+            handicap_rate: 0.7,
             map: {l: 320, t: 58},
+
+            curve: "M70,95 L87,12.5 83,12 54,90Z",
 
             size1: {
                 w: 530,
@@ -95,8 +99,10 @@ var parkings_data = (function(){
             
             price: 7,
             cars: 25,
-            handicap_rate: 0.7,
+            handicap_rate: 1,
             map: {l: 16, t: 120},
+
+            curve: "M0,53 L30,52 65,50 91,48 99,47 96,42 67,44 31,45 4,46Z",
 
             size1: {
                 w: 530,

@@ -44,12 +44,21 @@ function frame() {
                 container
                     .append("svg")
                     .attr("class", "svg-frame-overlay")
-                    .attr("width", inpx(width))
-                    .attr("height", inpx(height))
+                    .attr("width", "100%")
+                    .attr("height", "100%")
+                    .attr("viewBox", "0 0 100 100")
+                    .attr("preserveAspectRatio", "none")
                     .style("z-index", overlay_z_index)
                     .append("path")
-                    .attr("d", size.curve);
+                    .attr("vector-effect", "non-scaling-stroke")
+                    .attr("d", "M0,0 L 100,0 100,100 0, 100 Z " + parking.curve);
             }
+            container.on("click", function(){
+                var x = Math.floor(d3.mouse(this)[0]/width * 100);
+                var y = Math.floor(d3.mouse(this)[1]/height * 100);
+                console.log(x + "," + y)
+            });
+
 
             // var preload = container.append("div")
             //     .attr("class", "preload-container")

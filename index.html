@@ -14,7 +14,7 @@
     <meta property="og:type" content="website"/>
     <meta property="og:title"
           content="Паркувальна арифметика. Як 10 млн грн щомісяця осідає у кишенях київських паркувальників"/>
-    <meta property="og:image" content="http://texty.org.ua/d/parkings/og.jpg"/>
+    <meta property="og:image" content="http://texty.org.ua/d/parkings/img/titul.jpg"/>
     <meta property="og:description"
           content="За 4 місяці цього року служба столичного паркування отримала 7,4 млн грн доходу, витративши на утримання мережі паркувальників 7,8 млн грн."/>
     <meta property="og:url" content="http://texty.org.ua/d/parkings"/>
@@ -29,7 +29,7 @@
           content="Паркувальна арифметика. Як 10 млн грн щомісяця осідає у кишенях київських паркувальників"/>
     <meta name="twitter:description"
           content="За 4 місяці цього року служба столичного паркування отримала 7,4 млн грн доходу, витративши на утримання мережі паркувальників 7,8 млн грн."/>
-    <meta name="twitter:image:src" content="http://texty.org.ua/d/parkings/og.jpg"/>
+    <meta name="twitter:image:src" content="http://texty.org.ua/d/parkings/img/titul.jpg"/>
     <meta name="twitter:image:width" content="1200"/>
     <meta name="twitter:image:height" content="630"/>
     <!-- Other Meta Tags -->
@@ -62,27 +62,21 @@
 </div>
 
 <div class="desktop header-container">
+    <div class="header-image">
+        <h1>Паркувальна арифметика. <br> Чому збиткові київські парковки</h1>
+    </div>
+
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-md-10 col-md-offset-1">
+            <div class="col-xs-12 col-md-8 col-lg-6 col-md-offset-2 col-lg-offset-3">
                 <div class="header">
                     <div class="header-text">
-                        <div class="row">
-                            <div class="col-sm-9 col-md-7">
-                                <h1>Паркувальна арифметика. <br> Чому збиткові київські парковки</h1>
                                 <p class="subtitle">За 4 місяці цього року служба столичного паркування отримала 7,4 млн грн доходу, витративши на утримання мережі паркувальників 7,8 млн грн.</p>
                                 <div class="credits">
                                     <h6>Над проектом працювали: <b>Олександр Оксимець</b>, <b>Влад Герасименко</b>, <b>Євгенія Дроздова</b>, <b>Надя Кельм</b> </h6>
                                     <!--<br>-->
                                     <h6>Опубліковано: 10 серпня 2017 року</h6>
                                 </div>
-                            </div>
-                            <div class="col-sm-3 col-md-5 text-center">
-                                 <video autoplay loop muted>
-                                        <source src="video/output-new2.mp4" type="video/mp4">
-                                 </video>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -243,7 +237,7 @@
 </footer>
 
 
-<script type="text/x-handlebars-template" id="parking-card-template-530">
+<script type="text/x-handlebars-template" id="parking-card-template">
     <div class="parking-container" style="width: {{size.w}}px; margin: 0 auto;">
 
         <div class="parking-description">
@@ -283,15 +277,15 @@
 
         <div class="chart-container"></div>
         <div class="frame-container" style="width: {{size.w}}px; height: {{size.h}}px;">
-            <div class="chart-annotation" style="width: 150px;">
+            <div class="chart-annotation" style="width: {{annotation.w}}px; margin-left: {{annotation.left}}px">
                 <svg width="1px" height="1px">
-                    <g transform="translate(75, 0)">
+                    <g transform="translate({{annotation.tr}}, 0)">
                         <path class="line line-annotation" marker-end="url(#arrowhead)" d="M 0, 0 C 0, -25, 0, -50, 85, -50"></path>
                     </g>
                 </svg>
-                Рухайте мишею по графіку і дивіться, як змінювалася кількість автомобілів протягом дня
+                {{annotation.text}}
                 <svg width="1px" height="1px">
-                    <g transform="translate(75, 0)">
+                    <g transform="translate({{annotation.tr}}, 0)">
                         <path class="line line-annotation" marker-end="url(#arrowhead)" d="M 0, 0 C 0, 25, 0, 50, 85, 50"></path>
                     </g>
                 </svg>
