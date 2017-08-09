@@ -34,11 +34,15 @@
 .header-container.desktop {
 
   .header-image {
-    width: 100%;
-    min-height: 450px;
+    //width: 100%;
+    //min-height: 450px;
     position: relative;
 
-    background: url('../img/titul.jpg');
+    img {
+      width: 100%;
+      background: url('../img/titul.jpg');
+    }
+
     //background-size: cover;
     color: white;
   }
@@ -50,8 +54,9 @@
     text-align: left;
     font-size: 2.7em;
     left: 8%;
-    bottom: 16%;
+    bottom: 7%;
     position: absolute;
+    letter-spacing: 0.03em;
   }
 
 
