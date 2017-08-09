@@ -1,5 +1,8 @@
 .chart-container, .control-axis {
 
+  padding-top: 80px;
+  padding-bottom: 25px;
+
   svg, text {
     font-family: "Open Sans", sans-serif;
   }
@@ -39,7 +42,7 @@
     }
 
     .axis--x text {
-      text-anchor: start;
+      text-anchor: middle;
 
     }
 
@@ -180,7 +183,6 @@
       stroke: none;
     }
   }
-
 }
 
 #arrowhead {
@@ -188,4 +190,11 @@
   stroke-opacity: 0.87;
   fill: none;
   shape-rendering: auto;
+}
+
+.chart-explanation {
+  font-size: 1.5em;
+  h5 {
+    line-height: 1.5;
+  }
 }

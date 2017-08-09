@@ -242,47 +242,71 @@
 </div>
 </footer>
 
+
 <script type="text/x-handlebars-template" id="parking-card-template-530">
+    <div class="parking-container" style="width: {{size.w}}px; margin: 0 auto;">
+
+        <div class="parking-description">
+            <ul class="breadcrumb">
+                {{#each p.days}}
+                {{#ifCond this.date @root.day.date}}
+                <li class="active"><a href="javascript:void(0)">{{this.formatted.date}}</a></li>
+                {{else}}
+                <li><a href="javascript:void(0)">{{this.formatted.date}}</a></li>
+                {{/ifCond}}
+                {{/each}}
+            </ul>
+
+            <h2>{{p.name}}</h2>
+
+            <div class="numbers-table display-table">
+                <div class="display-row">
+                    <div class="number-left display-cell">{{day.formatted.declared}}</div>
+                    <div class="caption-right display-cell">Офіційно зібрано <span> (з 9:00 до 18:00)</span></div>
+                </div>
+
+                <div class="display-row">
+                    <div class="number-left display-cell">{{day.formatted.working_day_income}}</div>
+                    <div class="caption-right display-cell">Можна було зібрати</div>
+                </div>
+
+                <div class="display-row">
+                    <div class="number-left display-cell">{{day.formatted.extended_working_day_income}}</div>
+                    <div class="caption-right display-cell">Можна зібрати якщо розширити час роботи <span>(з 7:00 до 23:00)</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chart-explanation">
+            <h5><b>Час і гроші.</b> Кольором виділений офіційно платний час на київських парковках.</h5>
+        </div>
+
+        <div class="chart-container"></div>
+        <div class="frame-container" style="width: {{size.w}}px; height: {{size.h}}px;">
+            <div class="chart-annotation" style="width: 150px;">
+                <svg width="1px" height="1px">
+                    <g transform="translate(75, 0)">
+                        <path class="line line-annotation" marker-end="url(#arrowhead)" d="M 0, 0 C 0, -25, 0, -50, 85, -50"></path>
+                    </g>
+                </svg>
+                Рухайте мишею по графіку і дивіться, як змінювалася кількість автомобілів протягом дня
+                <svg width="1px" height="1px">
+                    <g transform="translate(75, 0)">
+                        <path class="line line-annotation" marker-end="url(#arrowhead)" d="M 0, 0 C 0, 25, 0, 50, 85, 50"></path>
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </div>
+</script>
+
+
+<script type="text/x-handlebars-template" id="parking-card-template-530-old">
     <div class="parking-container">
         <div class="display-table">
             <div class="display-row">
-                <div class="display-cell cell1">
-                    <div class="frame-container" style="width: {{size.w}}px; height: {{size.h}}px;"></div>
-                </div>
-                <div class="display-cell cell2 parking-description-and-map-container vertical-top">
-                    <div class="parking-description" style="height: {{size.h}}px;">
-                        <ul class="breadcrumb">
-                            {{#each p.days}}
-                                {{#ifCond this.date @root.day.date}}
-                            <li class="active"><a href="javascript:void(0)">{{this.formatted.date}}</a></li>
-                                {{else}}
-                            <li><a href="javascript:void(0)">{{this.formatted.date}}</a></li>
-                                {{/ifCond}}
-                            {{/each}}
-                        </ul>
-
-                        <h2>{{p.name}}</h2>
-                        <!--<div class="address">{{p.address}}</div>-->
-
-                        <div class="numbers-table display-table">
-                            <div class="display-row">
-                                <div class="number-left display-cell">{{day.formatted.declared}}</div>
-                                <div class="caption-right display-cell">Офіційно зібрано <span> (з 9:00 до 18:00)</span></div>
-                            </div>
-
-                            <div class="display-row">
-                                <div class="number-left display-cell">{{day.formatted.working_day_income}}</div>
-                                <div class="caption-right display-cell">Можна було зібрати</div>
-                            </div>
-
-                            <div class="display-row">
-                                <div class="number-left display-cell">{{day.formatted.extended_working_day_income}}</div>
-                                <div class="caption-right display-cell">Можна зібрати якщо розширити час роботи <span>(з 7:00 до 23:00)</span></div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+                <div class="display-cell cell1"></div>
+                <div class="display-cell cell2 parking-description-and-map-container vertical-top"></div>
             </div>
 
             <div class="display-row">
@@ -295,7 +319,6 @@
                     </div>
                 </div>
                 <div class="display-cell cell2 chart-cell">
-                    <div class="chart-container"></div>
                 </div>
             </div>
 
@@ -397,6 +420,7 @@
 <script src="lib/bootstrap.min.js" type="text/javascript"></script>
 <script src="lib/d3.v4.min.js"></script>
 <script src="lib/d3-jetpack.js"></script>
+<script src="lib/d3-annotation.min.js"></script>
 <script src="lib/moment.min.js"></script>
 <script src="lib/handlebars.min.js"></script>
 <script src="lib/share-behavior.js"></script>

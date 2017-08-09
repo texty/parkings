@@ -44,8 +44,6 @@
                 .touch(touch)
             ;
 
-        var control1 = control();
-
         var frame1 = frame()
             .parking(context.p)
             .day(context.day)
@@ -53,19 +51,11 @@
 
 
         div.select(".chart-container").call(chart1);
-        div.select(".control-container").call(control1);
         div.select(".frame-container").call(frame1);
 
         frame1.renderFrame();
+        chart1.onmove(function(xc) {frame1.move(xc)});
 
-
-        if (width == 530) {
-            control1.onmove(function(xc) {chart1.move(xc); frame1.move(xc)});
-            chart1.onmove(function(xc) {control1.move(xc); frame1.move(xc)});
-        } else {
-            chart1.onmove(function(xc) {frame1.move(xc)});
-        }
-        
         function renderAxis(div, width) {
             var axis = {
                 530: '<path class="domain" stroke="#000" d="M0.5,0V0.5H530.5V0"></path><g class="tick" opacity="1" transform="translate(0.5,0)"><text fill="#000" y="8" dy="0.71em">07</text></g><g class="tick" opacity="1" transform="translate(33.625,0)"><text fill="#000" y="8" dy="0.71em">08</text></g><g class="tick" opacity="1" transform="translate(66.75,0)"><text fill="#000" y="8" dy="0.71em">09</text></g><g class="tick" opacity="1" transform="translate(99.875,0)"><text fill="#000" y="8" dy="0.71em">10</text></g><g class="tick" opacity="1" transform="translate(133,0)"><text fill="#000" y="8" dy="0.71em">11</text></g><g class="tick" opacity="1" transform="translate(166.125,0)"><text fill="#000" y="8" dy="0.71em">12</text></g><g class="tick" opacity="1" transform="translate(199.25,0)"><text fill="#000" y="8" dy="0.71em">13</text></g><g class="tick" opacity="1" transform="translate(232.375,0)"><text fill="#000" y="8" dy="0.71em">14</text></g><g class="tick" opacity="1" transform="translate(265.5,0)"><text fill="#000" y="8" dy="0.71em">15</text></g><g class="tick" opacity="1" transform="translate(298.625,0)"><text fill="#000" y="8" dy="0.71em">16</text></g><g class="tick" opacity="1" transform="translate(331.75,0)"><text fill="#000" y="8" dy="0.71em">17</text></g><g class="tick" opacity="1" transform="translate(364.875,0)"><text fill="#000" y="8" dy="0.71em">18</text></g><g class="tick" opacity="1" transform="translate(398,0)"><text fill="#000" y="8" dy="0.71em">19</text></g><g class="tick" opacity="1" transform="translate(431.125,0)"><text fill="#000" y="8" dy="0.71em">20</text></g><g class="tick" opacity="1" transform="translate(464.25,0)"><text fill="#000" y="8" dy="0.71em">21</text></g><g class="tick" opacity="1" transform="translate(497.375,0)"><text fill="#000" y="8" dy="0.71em">22</text></g><g class="tick" opacity="1" transform="translate(530.5,0)"><text fill="#000" y="8" dy="0.71em">23</text></g>',

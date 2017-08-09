@@ -1,0 +1,21 @@
+.chart-annotation {
+  position: absolute;
+  //border: 1px solid black;
+
+  margin-left: -180px;
+
+  line-height: 1.5;
+
+  svg {
+    overflow: visible;
+    display: block;
+    path.line-annotation, #arrowhead {
+      stroke: rgb(140, 148, 148);
+      stroke-opacity: 0.87;
+      fill: none;
+      //stroke-width: 1.5px;
+      shape-rendering: auto;
+    }
+
+  }
+}
