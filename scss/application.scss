@@ -55,12 +55,6 @@ p {
   }
 }
 
-.disclaimer {
-  font-size: 1.3em;
-  color: #eee;
-  margin-top: 68px;
-  margin-left: 15px;
-}
 
 .sources {
   color: #BBC0BF;
@@ -172,4 +166,38 @@ h2 span {
   h3 {
     font-size: 2em;
   }
+}
+
+.disclaimer {
+  font-size: 1.3em;
+}
+
+.disclaimer.main-text {
+  margin-top: 0;
+}
+
+.disclaimer h4 {
+  border-top: 3px solid #383e47;
+  font-weight: 600;
+  padding-top: 0.5em;
+  display: inline-block;
+}
+
+.disclaimer {
+  p, li, h5{
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  //margin-top: 80px;
+}
+
+.disclaimer h5 {
+  font-weight: 800;
+}
+
+.disclaimer .pointer {
+  cursor: pointer;
+  border-bottom: 1px dashed;
+  display: inline-block;
 }
