@@ -108,9 +108,9 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-10 col-md-8 col-lg-8 col-sm-offset-1 col-md-offset-2 col-lg-offset-2">
-                <p>Парковки — це готівка. Скільки дядько в жилетці комунального підприємства «Київтранспарксервіс» припаркує на вулиці автомобілів, зі скількох і скільки візьме грошей, проконтролювати практично неможливо. Та ті суми, які декларує зараз підприємство, смішні. Наприклад, у липні 2017 року, <a href="http://gis.kievcity.gov.ua/" class="dotted">за даними інформаційної системи «Майно»</a>, найбільше грошей зібрали 5 числа — аж 53 тисячі гривень. За даними київських активістів із Реанімаційного пакету реформ, у місті 6689 паркомісць. Тобто в цей грошовий день одне паркомісце принесло Києву 7 гривень 90 копійок.</p>
-                <p>Ми поставили відеокамери над трьома парковками і порахували, скільки автомобілів реально паркується протягом трьох днів, та порівняли з офіційними даними щодо грошей, які приносять місту ці парковки. Офіційно київські парковки працюють з 9:00 до 18:00, ми рахували тільки цей проміжок.</p>
-                <p>Перший пункт спостереження — парковка біля торгового центру «Гуллівер» на вулиці Басейній — в середньому офіційно парковка принесла 243 грн за день, тоді як ми нарахували в близько 1400 грн.</p>
+                <p>Парковки — це готівка. Скільки дядько в жилетці комунального підприємства «Київтранспарксервіс» припаркує на вулиці автомобілів, зі скількох і скільки візьме грошей, проконтролювати практично неможливо. Та ті суми, які декларує зараз підприємство, смішні. Наприклад, у липні 2017 року, <a href="http://gis.kievcity.gov.ua/" class="dotted">за даними інформаційної системи «Майно»</a>, найбільше грошей зібрали 5-го числа — аж 53 тисячі гривень. За даними київських активістів із Реанімаційного пакету реформ, у місті 6689 паркомісць. Тобто в цей грошовий день одне паркомісце принесло Києву 7 гривень 90 копійок.</p>
+                <p>Ми поставили відеокамери над трьома парковками і порахували, скільки автомобілів реально паркується протягом трьох днів, та порівняли з офіційними даними щодо грошей, які приносять місту ці парковки. Офіційно київські парковки працюють з 9:00 до 18:00, тож ми рахували тільки цей проміжок.</p>
+                <p>Перший пункт спостереження — парковка біля торгового центру «Гуллівер» на вулиці Басейній — в середньому парковка офіційно принесла 243 грн за день, тоді як ми нарахували в близько 1400 грн.</p>
             </div>
         </div>
     </div>
@@ -137,9 +137,7 @@
             </div>
         </div>
     </div>
-    <!--<p class="caption">Парковка № 1003 вул. Басейна, 12 <br>8 місць <br> 24 травня </p>-->
-    <!--<p>задекларовано скільки то, можна було зібрати стільки то</p>-->
-    <!--<p>перевірити числа</p>-->
+
     <video class='mobgif' playsinline autoplay loop muted>
         <source src="data/1/mobile/mobile.mp4" type="video/mp4">
         <source src="data/1/mobile/mobile.webm" type="video/webm">
@@ -438,127 +436,11 @@
     </div>
 </script>
 
-
-<script type="text/x-handlebars-template" id="parking-card-template-530-old">
-    <div class="parking-container">
-        <div class="display-table">
-            <div class="display-row">
-                <div class="display-cell cell1"></div>
-                <div class="display-cell cell2 parking-description-and-map-container vertical-top"></div>
-            </div>
-
-            <div class="display-row">
-                <div class="display-cell cell1">
-                    <div class="control-container">
-                        <div class="control-img-container" style="width: {{size.w}}px; height: {{size.ch}}px;">
-                            <img class="control-img" src="data/{{p.number}}/{{size.w}}/control/{{day.date}}.jpg" alt="тягни">
-                            <div class="vertical-line" style="height: {{size.ch}}px; left: 371px;"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="display-cell cell2 chart-cell">
-                </div>
-            </div>
-
-            <div class="display-row">
-                <div class="display-cell cell1">
-                    <div class="control-axis">
-                        <svg width="{{size.w}}px" height="25px">
-                            <g class="axis axis--x"  fill="none" font-size="10" font-family="sans-serif" text-anchor="middle"></g>
-                        </svg>
-                    </div>
-                </div>
-                <div class="display-cell cell2">
-                    <div class="control-axis"></div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</script>
-
-
-<script type="text/x-handlebars-template" id="parking-card-template-480">
-    <div class="parking-container middle">
-        <div class="display-table">
-            <div class="display-row">
-                <div class="display-cell cell1">
-                    <div class="frame-container" style="width: {{size.w}}px; height: {{size.h}}px;"></div>
-                </div>
-                <div class="display-cell cell2 parking-description-and-map-container vertical-top">
-                    <div class="parking-description" style="height: {{size.h}}px;">
-                        <ul class="breadcrumb">
-                            {{#each p.days}}
-                            {{#ifCond this.date @root.day.date}}
-                            <li class="active"><a href="javascript:void(0)">{{this.formatted.date}}</a></li>
-                            {{else}}
-                            <li><a href="javascript:void(0)">{{this.formatted.date}}</a></li>
-                            {{/ifCond}}
-                            {{/each}}
-                        </ul>
-
-                        <h2>{{p.name}}</h2>
-                        <div class="address">{{p.address}}</div>
-
-                        <div class="numbers-table display-table">
-                            <div class="display-row">
-                                <div class="display-cell number-left">{{day.formatted.declared}}</div>
-                            </div>
-
-                            <div class="display-row">
-                                <div class="display-cell caption-right">Офіційно зібрано <span> (з 9:00 до 18:00)</span></div>
-                            </div>
-
-                            <div class="display-row">
-                                <div class="display-cell number-left">{{day.formatted.working_day_income}}</div>
-                            </div>
-
-                            <div class="display-row">
-                                <div class="caption-right display-cell">Можна було зібрати</div>
-                            </div>
-
-                            <div class="display-row">
-                                <div class="display-cell number-left">{{day.formatted.extended_working_day_income}}</div>
-                            </div>
-
-                            <div class="display-row">
-                                <div class="caption-right display-cell">Можна зібрати якщо розширити час роботи <span>(з 7:00 до 23:00)</span></div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="display-row">
-                <div class="display-cell cell1 chart-cell" style="height: 160px">
-                    <div class="chart-container"></div>
-                </div>
-                <div class="display-cell cell2"></div>
-            </div>
-
-            <div class="display-row">
-                <div class="display-cell cell1">
-                    <div class="control-axis">
-                        <svg width="{{size.w}}px" height="25px">
-                            <g class="axis axis--x"  fill="none" font-size="10" font-family="sans-serif" text-anchor="middle"></g>
-                        </svg>
-                    </div>
-                </div>
-                <div class="display-cell cell2">
-                    <div class="control-axis"></div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</script>
-
 <script src="lib/jquery-2.1.4.min.js" type="text/javascript"></script>
 <script src="lib/bootstrap.min.js" type="text/javascript"></script>
-<script src="lib/d3.v4.min.js"></script>
+<script src="lib/d3.v4.parkings.min.js"></script>
 <script src="lib/d3-jetpack.js"></script>
-<script src="lib/d3-annotation.min.js"></script>
+<!--<script src="lib/d3-annotation.min.js"></script>-->
 <script src="lib/moment.min.js"></script>
 <script src="lib/handlebars.min.js"></script>
 <script src="lib/share-behavior.js"></script>
@@ -567,7 +449,7 @@
 
 <script src="js/mobile.js"></script>
 <script src="js/chart.js"></script>
-<script src="js/control.js"></script>
+<!--<script src="js/control.js"></script>-->
 <script src="js/frame.js"></script>
 <script src="js/data.js"></script>
 <script src="js/main.js"></script>
