@@ -50,7 +50,7 @@ var parkings_data = (function(){
             ]
         },
         {
-            name: "Суворова, 4",
+            name: "Омеляновича-Павленка, 4",
             address: "вулиця Суворова, 4",
             number: 2,
             

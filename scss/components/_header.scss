@@ -215,9 +215,16 @@
 
 }
 
-
-
-
+.header-image-caption {
+  position: absolute;
+  right: 2em;
+  margin-top: 0.7em;
+  font-style: italic;
+  color: $c_grey;
+  font-size: 1.2em;
+  font-weight: 300;
+  max-width: 60%;
+}
 
 
 .IIV::-webkit-media-controls-play-button,

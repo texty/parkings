@@ -60,11 +60,11 @@
     
     // var q = d3.queue(1);
     
-    var main_container = d3.select('#main-container');
 
 
     parkings_data.forEach(function(p, i) {
-        var parking_group = main_container.append("div")
+        var container = d3.select('#main-container-' + p.number);
+        var parking_group = container.append("div")
             .attr("class", "parking-group")
             .attr("id", "parking" + (i+1));
 
