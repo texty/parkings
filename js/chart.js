@@ -134,7 +134,7 @@ function chart() {
                 .append("text")
                 .attr("y", -35-5)
                 .attr("text-anchor", "start")
-                .tspans(["час за який заявлений добовий", "дохід зароблено"], 12)
+                .tspans(["час за який зароблено", "заявлений добовий дохід"], 12)
                 .attr("x", 10);
 
 
@@ -153,7 +153,7 @@ function chart() {
                 .append("text")
                 .attr("y", -35-5)
                 .attr("text-anchor", "start")
-                .tspans(["реальний час, який би ", "мали оплатити автомобілісти"], 12)
+                .tspans(["дохід за ці години", "не потрапив у бюджет"], 12)
                 .attr("x", 10);
 
             var touch_width = 10, touch_height = 40;
