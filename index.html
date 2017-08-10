@@ -64,7 +64,7 @@
 <div class="desktop header-container">
     <div class="header-image">
         <img src="img/titul.jpg" alt="">
-        <div class="header-image-caption">16 червня 2017 року, парковка на вул. Омеляновича-Павленка, 4 з 7:00 до 10:05 ранку (<a href="#compressed_parking" class="dotted">Що&nbsp;це&nbsp;на&nbsp;картинці?</a>) </div>
+        <div class="header-image-caption">16 червня 2017 року, парковка на вул. Омеляновича-Павленка, 4 з 7:00 до 10:05 ранку (<a id="wtf" href="#compressed_parking" onclick="openMethodologyAndGo()" class="dotted">Що&nbsp;це&nbsp;на&nbsp;картинці?</a>) </div>
         <h1>Збиткова справа: <br> Що робити з парковками?</h1>
     </div>
 
@@ -332,6 +332,9 @@
                 <p>Дякуємо <a href="http://eurointegration.com.ua" class="dotted">Європейській правді</a>, <a href="http://imi.org.ua/" class="dotted">Інституту масової інформації</a> та <a href="https://www.ciklum.com/" class="dotted">IT-компанії «Ciklum»</a> за можливість встановити відеокамери, а також групі
                     <a href="https://www.facebook.com/rpr.kyiv/" class="dotted">«Реанімаційний пакет реформ — Київ»</a>, зокрема Оксані Величко та Олесі Ткачук, за допомогу в написанні статті.
                 </p>
+
+                <p>Як активісти намагаються реформувати київські парковки <a href="http://texty.org.ua/pg/article/editorial/read/78608/" class="dotted">читайте тут</a>
+                </p>
             </div>
         </div>
     </div>
@@ -554,6 +557,15 @@
             $(".logo").css('display', 'block');
         }
     });
+</script>
+
+<script>
+    function openMethodologyAndGo() {
+        console.log('here');
+        console.log(this);
+        $(".disclaimer .pointer").click();
+        $("#wff").click();
+    }
 </script>
 
 <script>

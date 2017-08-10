@@ -134,6 +134,25 @@ function chart() {
                 .tspans(["час за який заявлений добовий", "дохід зароблено"], 12)
                 .attr("x", 10);
 
+
+            var ann2 = g.append("g")
+                .attr("class", "g-annotation")
+                .translate([320, 0]);
+
+            ann2
+                .append("path")
+                .attr("class", "line line-annotation")
+                .attr('marker-end', 'url(#arrowhead)')
+                // .attr("d", "M -35, -35 C -20, -35, 0, -25, 0, 0")
+                .attr("d", "M 0, -35 C -10, -35, -25, -25, -25, 0");
+
+            ann2
+                .append("text")
+                .attr("y", -35-5)
+                .attr("text-anchor", "start")
+                .tspans(["реальний час, який би ", "мали оплатити автомобілісти"], 12)
+                .attr("x", 10);
+
             var touch_width = 10, touch_height = 40;
 
             var touch_bar = g.append("g")
