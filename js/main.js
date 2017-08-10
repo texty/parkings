@@ -56,6 +56,7 @@
 
         frame1.renderFrame();
         chart1.onmove(function(xc) {frame1.move(xc)});
+        chart1.on_move_threshold(function() {frame1.remove_overlay()});
     }
     
     // var q = d3.queue(1);

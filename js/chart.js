@@ -7,6 +7,9 @@ function chart() {
         , size
         , touch
         , _onmove = function() {}
+        , _on_move_threshold = function() {}
+        , move_threshold = 70
+        , move_count = 0
         ;
 
 
@@ -214,6 +217,11 @@ function chart() {
                     .attr("cy", yc);
 
                 touch_bar.translate([xc, 0]);
+
+
+                move_count++;
+
+                if (move_count < move_threshold && ++move_count >= move_threshold) _on_move_threshold();
             }
 
             function mousemove() {
@@ -263,6 +271,12 @@ function chart() {
     my.onmove = function(value) {
         if (!arguments.length) return _onmove;
         _onmove = value;
+        return my;
+    };
+
+    my.on_move_threshold = function(value) {
+        if (!arguments.length) return _on_move_threshold;
+        _on_move_threshold = value;
         return my;
     };
 

@@ -39,9 +39,10 @@ function frame() {
                 .style("height", inpx(height))
                 .style("z-index", low_z_index);
 
+            var overlay;
 
             if (size.curve) {
-                container
+                overlay = container
                     .append("svg")
                     .attr("class", "svg-frame-overlay")
                     .attr("width", "100%")
@@ -108,6 +109,13 @@ function frame() {
                 frames.style("z-index", function(d) {return d==img_number ? high_z_index : low_z_index});
                 
                 frame_n_ = frame_n;
+            };
+
+            my.remove_overlay = function() {
+                overlay
+                    .transition()
+                    .duration(2000)
+                    .style('fill-opacity', 0)
             };
         });
     }
