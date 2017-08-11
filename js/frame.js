@@ -3,8 +3,8 @@ function frame() {
     var size
         , day
         , parking
-        , frame_list = [0, 1]
-        , format = d3.format("02.0f")
+        , frame_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+        , format = d3.format("03.0f")
         , high_z_index = 101
         , low_z_index = 1
         , first_frame_z_index = 102
@@ -54,11 +54,11 @@ function frame() {
                     .attr("vector-effect", "non-scaling-stroke")
                     .attr("d", "M0,0 L 100,0 100,100 0, 100 Z " + parking.curve);
             }
-            container.on("click", function(){
-                var x = Math.floor(d3.mouse(this)[0]/width * 100);
-                var y = Math.floor(d3.mouse(this)[1]/height * 100);
-                console.log(x + "," + y)
-            });
+            // container.on("click", function(){
+            //     var x = Math.floor(d3.mouse(this)[0]/width * 100);
+            //     var y = Math.floor(d3.mouse(this)[1]/height * 100);
+            //     console.log(x + "," + y)
+            // });
 
 
             // var preload = container.append("div")
@@ -101,8 +101,8 @@ function frame() {
                 var frame_n = Math.floor(offsetScale(xc));
                 if (frame_n == frame_n_) return;
 
-                var img_number = Math.floor(frame_n/100);
-                var offset = -(frame_n % 100) * height;
+                var img_number = Math.floor(frame_n/10);
+                var offset = -(frame_n % 10) * height;
 
                 first_frame.style("z-index", low_z_index);
                 frames.style("background-position", function(d) {return d==img_number ? "0px " + offset + "px" : ""});
@@ -122,7 +122,7 @@ function frame() {
     
     my.renderFrame = function () {
         frames.style("background-image", function(d) {
-            return "url('data/" + parking.number + "/" + size.w + "/frames/" + day.date + "_" + format(d) + ".jpg')"
+            return "url('data/" + parking.number + "/" + size.w + "/frames19/" + day.date + "_" + format(d) + ".jpg')"
         });
         
         return my;
